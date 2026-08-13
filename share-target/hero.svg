@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="880" height="360" rx="18" fill="url(#bg)"/>
+
+  <!-- phone -->
+  <rect x="60" y="40" width="150" height="280" rx="20" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+  <rect x="72" y="56" width="126" height="180" rx="8" fill="#111c2e"/>
+  <text x="135" y="92" text-anchor="middle" fill="#94a3b8" font-size="13">Any app</text>
+  <rect x="84" y="106" width="102" height="10" rx="5" fill="#1e3a5f"/>
+  <rect x="84" y="124" width="84" height="10" rx="5" fill="#1e3a5f"/>
+  <rect x="84" y="142" width="94" height="10" rx="5" fill="#1e3a5f"/>
+  <!-- share sheet -->
+  <rect x="72" y="244" width="126" height="62" rx="10" fill="#16233b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="135" y="264" text-anchor="middle" fill="#e2e8f0" font-size="12">Share</text>
+  <circle cx="97" cy="286" r="11" fill="#334155"/>
+  <circle cx="135" cy="286" r="13" fill="url(#accent)"/>
+  <text x="135" y="291" text-anchor="middle" fill="#0b1220" font-size="12" font-weight="700">You</text>
+  <circle cx="173" cy="286" r="11" fill="#334155"/>
+
+  <!-- arrow -->
+  <path d="M240 180 C 320 180, 320 180, 400 180" stroke="url(#accent)" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M392 166 L 416 180 L 392 194 Z" fill="#818cf8"/>
+  <text x="325" y="163" text-anchor="middle" fill="#cbd5e1" font-size="14">one tap</text>
+
+  <!-- code card -->
+  <rect x="430" y="70" width="392" height="220" rx="14" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+  <circle cx="454" cy="94" r="5" fill="#f87171"/>
+  <circle cx="472" cy="94" r="5" fill="#fbbf24"/>
+  <circle cx="490" cy="94" r="5" fill="#34d399"/>
+  <text x="450" y="132" fill="#7dd3fc" font-size="15" font-family="Consolas, monospace">foreach (ShareTarget::pending() as $item) {</text>
+  <text x="470" y="158" fill="#e2e8f0" font-size="15" font-family="Consolas, monospace">match ($item-&gt;type()) {</text>
+  <text x="490" y="184" fill="#fbbf24" font-size="15" font-family="Consolas, monospace">'url'   =&gt; $this-&gt;saveLink(...),</text>
+  <text x="490" y="210" fill="#fbbf24" font-size="15" font-family="Consolas, monospace">'image' =&gt; $this-&gt;saveFiles(...),</text>
+  <text x="470" y="236" fill="#e2e8f0" font-size="15" font-family="Consolas, monospace">}</text>
+  <text x="450" y="262" fill="#7dd3fc" font-size="15" font-family="Consolas, monospace">}</text>
+
+  <text x="440" y="330" fill="#94a3b8" font-size="16">Links · Text · Photos · Videos · PDFs — straight into Laravel</text>
+</svg>
