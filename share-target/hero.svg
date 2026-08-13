@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F3F7FF"/>
+      <stop offset="1" stop-color="#DCE5F7"/>
+    </linearGradient>
+    <linearGradient id="slabTop" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E6EDFA"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EDF3FF"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#7C5CFC" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#7C5CFC" stop-opacity="0.07"/>
+    </linearGradient>
+    <radialGradient id="contact" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5C6E90" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#5C6E90" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="11"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.20"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dy="6"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.24"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="880" height="360" rx="18" fill="url(#bg)"/>
+
+  <!-- === LEFT: value proposition === -->
+  <text x="56" y="120" font-size="38" font-weight="700" fill="#1B2440">Let people share</text>
+  <text x="56" y="166" font-size="38" font-weight="700" fill="#7C5CFC">into your app.</text>
+
+  <text x="57" y="207" font-size="14.5" fill="#5B6785">Your app joins the OS share sheet, so links,</text>
+  <text x="57" y="228" font-size="14.5" fill="#5B6785">text, photos, videos and PDFs land in a native</text>
+  <text x="57" y="249" font-size="14.5" fill="#5B6785">inbox — even when the app was closed.</text>
+
+  <g filter="url(#tight)">
+    <rect x="56" y="277" width="356" height="42" rx="10" fill="#1B2440"/>
+  </g>
+  <text x="74" y="303" font-size="13.5" font-family="Consolas, Menlo, monospace" fill="#C4B5FD">$items = ShareTarget::<tspan fill="#FFB4A8">pending</tspan>();</text>
+
+  <!-- === RIGHT: isometric diorama === -->
+
+  <!-- ground slab, 190x190 iso at (660,88) -->
+  <g filter="url(#soft)">
+    <g transform="translate(0,9)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+        <rect width="190" height="190" rx="15" fill="#BFCCE5"/>
+      </g>
+    </g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+      <rect width="190" height="190" rx="15" fill="url(#slabTop)"/>
+      <g stroke="#CFDAEE" stroke-width="1.1" opacity="0.8">
+        <path d="M0 52 H190 M0 112 H190 M0 156 H190"/>
+        <path d="M46 0 V190 M100 0 V190 M150 0 V190"/>
+      </g>
+      <rect x="40" y="42" width="112" height="112" rx="18" fill="url(#pad)" stroke="#7C5CFC" stroke-width="2.2" stroke-dasharray="9 7"/>
+    </g>
+  </g>
+
+  <!-- props standing on the slab, clear of the landing pad -->
+  <g transform="translate(772,196)">
+    <ellipse cx="0" cy="9" rx="16" ry="6.5" fill="url(#contact)"/>
+    <g stroke="#AEBDD8" stroke-width="0.9" stroke-linejoin="round">
+      <path d="M-13 6 L0 -1 L13 6 L0 13 Z" fill="#C9D6EC"/>
+      <path d="M-13 1 L0 -6 L13 1 L0 8 Z" fill="#E4EBF8"/>
+      <path d="M-13 -4 L0 -11 L13 -4 L0 3 Z" fill="#FFFFFF"/>
+    </g>
+    <path d="M-6.5 -4.4 L-2 -7 L1.6 -4.8 L5 -7.4 L8.5 -4.2 L0 0.6 Z" fill="#9DB0CE"/>
+  </g>
+  <g transform="translate(566,206)">
+    <ellipse cx="0" cy="8" rx="14" ry="6" fill="url(#contact)"/>
+    <g stroke="#AEBDD8" stroke-width="0.9" stroke-linejoin="round">
+      <path d="M-12 3 L0 -4 L12 3 L0 10 Z" fill="#DCE5F4"/>
+      <path d="M-12 3 V-9 L0 -16 V-4 Z" fill="#F7FAFF"/>
+      <path d="M12 3 V-9 L0 -16 V-4 Z" fill="#BFCCE5"/>
+    </g>
+  </g>
+
+  <!-- connectors: each ends ON the card corner and ON the phone silhouette -->
+  <g stroke="#9DB0CE" stroke-width="1.3" fill="none">
+    <path d="M662 83 L704 84"/>
+    <path d="M606 105 L604 141"/>
+    <path d="M756 114 L730 137"/>
+    <path d="M656 171 L632 211"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#9DB0CE" stroke-width="1.3">
+    <rect x="679.5" y="80" width="7" height="7" rx="1.6"/>
+    <rect x="601.5" y="119.5" width="7" height="7" rx="1.6"/>
+    <rect x="739.5" y="122" width="7" height="7" rx="1.6"/>
+    <rect x="640.5" y="187.5" width="7" height="7" rx="1.6"/>
+  </g>
+
+  <!-- === the phone: the OS share sheet, your app listed first === -->
+  <g filter="url(#soft)">
+    <g transform="translate(14,-52)">
+      <g transform="translate(0,10)">
+        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+          <rect x="65" y="30" width="60" height="116" rx="11" fill="#222B44"/>
+        </g>
+      </g>
+      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+        <rect x="65" y="30" width="60" height="116" rx="11" fill="#2B3550"/>
+        <rect x="70" y="37" width="50" height="102" rx="6" fill="url(#screen)"/>
+
+        <rect x="87" y="42" width="16" height="2.6" rx="1.3" fill="#C3D0E6"/>
+
+        <rect x="75" y="50" width="40" height="28" rx="4" fill="#E7EFFD"/>
+        <path d="M82 72 L91 60 L98 69 L104 63 L108 72 Z" fill="#C3D0E6"/>
+        <circle cx="86" cy="58" r="3.2" fill="#D9E3F5"/>
+
+        <g>
+          <rect x="75" y="84" width="40" height="14" rx="3.5" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
+          <rect x="75" y="84" width="2.8" height="14" rx="1.4" fill="#7C5CFC"/>
+          <rect x="81" y="87.5" width="8" height="8" rx="2.2" fill="#7C5CFC"/>
+          <rect x="92" y="88" width="19" height="2.8" rx="1.4" fill="#41506F" opacity="0.78"/>
+          <rect x="92" y="93" width="11" height="2.4" rx="1.2" fill="#93A2BF" opacity="0.7"/>
+
+          <rect x="75" y="102" width="40" height="14" rx="3.5" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
+          <rect x="81" y="105.5" width="8" height="8" rx="2.2" fill="#C3D0E6"/>
+          <rect x="92" y="106" width="16" height="2.8" rx="1.4" fill="#41506F" opacity="0.38"/>
+          <rect x="92" y="111" width="9" height="2.4" rx="1.2" fill="#93A2BF" opacity="0.42"/>
+
+          <rect x="75" y="120" width="40" height="14" rx="3.5" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
+          <rect x="81" y="123.5" width="8" height="8" rx="2.2" fill="#C3D0E6"/>
+          <rect x="92" y="124" width="18" height="2.8" rx="1.4" fill="#41506F" opacity="0.38"/>
+          <rect x="92" y="129" width="8" height="2.4" rx="1.2" fill="#93A2BF" opacity="0.42"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- === card: someone taps Share in any app === -->
+  <g filter="url(#tight)">
+    <g transform="translate(0,-58)">
+      <g transform="translate(0,7)">
+        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+          <rect x="-4" y="18" width="58" height="34" rx="7" fill="#C6D3EB"/>
+        </g>
+      </g>
+      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+        <rect x="-4" y="18" width="58" height="34" rx="7" fill="#FFFFFF"/>
+        <g transform="translate(4,24)">
+          <circle cx="3.4" cy="7" r="3.2" fill="#5B6785"/>
+          <circle cx="13" cy="2.6" r="3.2" fill="#5B6785"/>
+          <circle cx="13" cy="11.4" r="3.2" fill="#5B6785"/>
+          <path d="M6.4 5.6 L10 3.4 M6.4 8.4 L10 10.6" stroke="#5B6785" stroke-width="1.3" stroke-linecap="round"/>
+        </g>
+        <text x="24" y="34.5" font-size="10.5" font-weight="700" fill="#41506F">Share</text>
+        <rect x="4" y="41" width="46" height="2.6" rx="1.3" fill="#DDE5F4"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- === card: plain PHP receives the payload === -->
+  <g filter="url(#tight)">
+    <g transform="translate(0,-52)">
+      <g transform="translate(0,7)">
+        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+          <rect x="142" y="62" width="64" height="36" rx="7" fill="#2C55C9"/>
+        </g>
+      </g>
+      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+        <rect x="142" y="62" width="64" height="36" rx="7" fill="#3B6FF5"/>
+        <text x="150" y="76" font-size="10" font-weight="700" fill="#FFFFFF">PHP</text>
+        <rect x="150" y="81" width="46" height="2.6" rx="1.3" fill="#FFFFFF" opacity="0.45"/>
+        <rect x="150" y="86.5" width="30" height="2.4" rx="1.2" fill="#FFFFFF" opacity="0.32"/>
+        <g transform="translate(172,71)">
+          <rect width="28" height="10" rx="5" fill="#FFFFFF" opacity="0.92"/>
+          <text x="4.6" y="7.4" font-size="6.2" font-weight="700" fill="#2C55C9">$item</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- === card: the native inbox holds it === -->
+  <g filter="url(#tight)">
+    <g transform="translate(0,-58)">
+      <g transform="translate(0,7)">
+        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+          <rect x="-16" y="106" width="60" height="34" rx="7" fill="#C6D3EB"/>
+        </g>
+      </g>
+      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+        <rect x="-16" y="106" width="60" height="34" rx="7" fill="#FFFFFF"/>
+        <text x="-8" y="119" font-size="10" font-weight="700" fill="#41506F">Inbox</text>
+        <g transform="translate(21,110)">
+          <rect width="16" height="10" rx="5" fill="#7C5CFC"/>
+          <text x="5.2" y="7.4" font-size="6.4" font-weight="700" fill="#FFFFFF">3</text>
+        </g>
+        <rect x="-8" y="124" width="44" height="2.8" rx="1.4" fill="#C6D3EB"/>
+        <rect x="-8" y="130" width="30" height="2.6" rx="1.3" fill="#DDE5F4"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- === chip: nothing is lost while the app is closed === -->
+  <g filter="url(#tight)">
+    <g transform="translate(0,-8)">
+      <g transform="translate(0,6)">
+        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+          <rect x="116" y="150" width="64" height="26" rx="7" fill="#0F1526"/>
+        </g>
+      </g>
+      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
+        <rect x="116" y="150" width="64" height="26" rx="7" fill="#1B2440"/>
+        <rect x="125" y="159" width="8" height="6.5" rx="1.6" fill="none" stroke="#FF6B5A" stroke-width="1.4"/>
+        <path d="M126.6 159 V157.4 A2.4 2.4 0 0 1 131.4 157.4 V159" stroke="#FF6B5A" stroke-width="1.3" fill="none"/>
+        <text x="138" y="165.4" font-size="8.6" font-weight="700" fill="#FFFFFF">app closed</text>
+      </g>
+    </g>
+  </g>
+
+</svg>
