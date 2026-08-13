@@ -1,221 +1,114 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1">
-      <stop offset="0" stop-color="#F3F7FF"/>
-      <stop offset="1" stop-color="#DCE5F7"/>
+    <linearGradient id="bgDark" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#1B2438"/>
+      <stop offset="1" stop-color="#141C2C"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="56" y1="0" x2="470" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4EA3F7"/>
+      <stop offset="1" stop-color="#8B7CF8"/>
     </linearGradient>
     <linearGradient id="slabTop" x1="0" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#E6EDFA"/>
+      <stop offset="0" stop-color="#232F4C"/>
+      <stop offset="1" stop-color="#1B2438"/>
     </linearGradient>
-    <linearGradient id="fenceFill" x1="0" y1="0" x2="0.5" y2="1">
-      <stop offset="0" stop-color="#17B8A6" stop-opacity="0.34"/>
-      <stop offset="1" stop-color="#17B8A6" stop-opacity="0.12"/>
-    </linearGradient>
-    <linearGradient id="screen" x1="0" y1="0" x2="0.4" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#EDF3FF"/>
-    </linearGradient>
-    <radialGradient id="contact" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#5C6E90" stop-opacity="0.34"/>
-      <stop offset="1" stop-color="#5C6E90" stop-opacity="0"/>
-    </radialGradient>
-
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
-      <feOffset dy="11"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.20"/></feComponentTransfer>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
     </filter>
-    <filter id="tight" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
-      <feOffset dy="6"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.24"/></feComponentTransfer>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="glowBig" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="9"/>
     </filter>
   </defs>
 
-  <rect width="880" height="360" rx="18" fill="url(#bg)"/>
+  <rect width="880" height="360" rx="20" fill="url(#bgDark)"/>
 
   <!-- === LEFT: value proposition === -->
-  <text x="56" y="120" font-size="38" font-weight="700" fill="#1B2440">Fences that</text>
-  <text x="56" y="166" font-size="38" font-weight="700" fill="#0E9E8E">outlive your app.</text>
+  <text x="56" y="120" font-size="38" font-weight="700" fill="#F4F7FC">Fences that</text>
+  <text x="56" y="166" font-size="38" font-weight="700" fill="url(#accent)">outlive your app.</text>
 
-  <text x="57" y="207" font-size="14.5" fill="#5B6785">OS-level geofences that survive app death</text>
-  <text x="57" y="228" font-size="14.5" fill="#5B6785">and reboot. Enter/exit reported to your</text>
-  <text x="57" y="249" font-size="14.5" fill="#5B6785">server from native code, with no PHP running.</text>
+  <text x="57" y="207" font-size="14.5" fill="#8E9BB5">OS-level geofences that survive app death</text>
+  <text x="57" y="228" font-size="14.5" fill="#8E9BB5">and reboot. Enter/exit reported to your</text>
+  <text x="57" y="249" font-size="14.5" fill="#8E9BB5">server from native code, with no PHP running.</text>
 
-  <g filter="url(#tight)">
-    <rect x="56" y="277" width="356" height="42" rx="10" fill="#1B2440"/>
-  </g>
-  <text x="74" y="303" font-size="13.5" font-family="Consolas, Menlo, monospace" fill="#7FE3D6">Geofence::register(<tspan fill="#FFB4A8">'warehouse'</tspan>, ...);</text>
+  <rect x="56" y="277" width="360" height="42" rx="10" fill="#10182A" stroke="#263452" stroke-width="1.2"/>
+  <text x="74" y="303" font-size="13.5" font-family="Consolas, Menlo, monospace"><tspan fill="#4EC9B0">Geofence</tspan><tspan fill="#8E9BB5">::</tspan><tspan fill="#4EA3F7">register</tspan><tspan fill="#C8D3E8">(</tspan><tspan fill="#E8A87C">'warehouse'</tspan><tspan fill="#C8D3E8">, ...);</tspan></text>
 
-  <!-- === RIGHT: isometric diorama === -->
+  <!-- === RIGHT: dark iso map floor === -->
 
-  <!-- ground slab, 190x190 iso at (660,88) -->
-  <g filter="url(#soft)">
-    <g transform="translate(0,9)">
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect width="190" height="190" rx="15" fill="#BFCCE5"/>
+  <!-- floor slab: iso 200x200 at (655,52) -->
+  <g>
+    <g transform="translate(0,10)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,655,52)">
+        <rect width="200" height="200" rx="10" fill="#101726"/>
       </g>
     </g>
-    <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-      <rect width="190" height="190" rx="15" fill="url(#slabTop)"/>
-      <g stroke="#CFDAEE" stroke-width="1.1" opacity="0.8">
-        <path d="M0 52 H190 M0 112 H190 M0 156 H190"/>
-        <path d="M46 0 V190 M100 0 V190 M150 0 V190"/>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,655,52)">
+      <rect width="200" height="200" rx="10" fill="url(#slabTop)"/>
+      <g stroke="#2A3A5C" stroke-width="1" opacity="0.7">
+        <path d="M0 50 H200 M0 100 H200 M0 150 H200"/>
+        <path d="M50 0 V200 M100 0 V200 M150 0 V200"/>
       </g>
-      <path d="M0 88 H66 Q82 88 82 104 V190" stroke="#B9C7E2" stroke-width="9" fill="none" opacity="0.5" stroke-linecap="round"/>
-      <circle cx="95" cy="95" r="58" fill="url(#fenceFill)" stroke="#17B8A6" stroke-width="2.6" stroke-dasharray="9 7"/>
-      <circle cx="95" cy="95" r="3.4" fill="#0E9E8E"/>
+
+      <!-- faint second fence, violet, for depth -->
+      <circle cx="163" cy="42" r="30" fill="none" stroke="#8B7CF8" stroke-width="1.6" stroke-dasharray="6 5" opacity="0.4"/>
+      <circle cx="163" cy="42" r="2.2" fill="#8B7CF8" opacity="0.5"/>
+
+      <!-- the geofence: glow pass, then crisp pass -->
+      <circle cx="92" cy="108" r="62" fill="#2DD4BF" fill-opacity="0.07"/>
+      <circle cx="92" cy="108" r="62" fill="none" stroke="#2DD4BF" stroke-width="5" opacity="0.55" filter="url(#glow)"/>
+      <circle cx="92" cy="108" r="62" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-dasharray="10 7"/>
+      <circle cx="92" cy="108" r="3.6" fill="#2DD4BF"/>
     </g>
   </g>
 
-  <!-- props sitting on the slab -->
-  <g transform="translate(726,220)">
-    <ellipse cx="0" cy="6" rx="14" ry="6" fill="url(#contact)"/>
-    <path d="M0 -29 L11 -6 L-11 -6 Z" fill="#3FC9B4"/>
-    <path d="M0 -18 L13 4 L-13 4 Z" fill="#17B8A6"/>
-    <rect x="-2.6" y="2" width="5.2" height="8" rx="2" fill="#8B6B52"/>
-  </g>
-  <g transform="translate(546,172)">
-    <ellipse cx="0" cy="6" rx="15" ry="6" fill="url(#contact)"/>
-    <path d="M-13 1 L0 -6 L13 1 L0 8 Z" fill="#E4EBF8"/>
-    <path d="M-13 1 V-13 L0 -20 V-6 Z" fill="#FFFFFF"/>
-    <path d="M13 1 V-13 L0 -20 V-6 Z" fill="#C9D6EC"/>
+  <!-- pin at the fence centre: slab(92,108) -> screen (641.1, 152) -->
+  <g transform="translate(641,152)">
+    <ellipse cx="0" cy="2" rx="12" ry="4.5" fill="#000000" opacity="0.35"/>
+    <path d="M0 0 C-11 -15 -17 -22 -17 -31 A17 17 0 0 1 17 -31 C17 -22 11 -15 0 0 Z" fill="#FF6B5A" opacity="0.6" filter="url(#glow)"/>
+    <path d="M0 0 C-11 -15 -17 -22 -17 -31 A17 17 0 0 1 17 -31 C17 -22 11 -15 0 0 Z" fill="#FF6B5A"/>
+    <circle cx="0" cy="-31" r="6" fill="#FFE4DF"/>
   </g>
 
-  <!-- location pin planted on the fence edge -->
-  <ellipse cx="589" cy="186" rx="13" ry="5" fill="url(#contact)"/>
-  <g transform="translate(589,183)" filter="url(#tight)">
-    <path d="M0 0 C-12 -16 -18 -24 -18 -33 A18 18 0 0 1 18 -33 C18 -24 12 -16 0 0 Z" fill="#FF6B5A"/>
-    <circle cx="0" cy="-33" r="6.6" fill="#FFFFFF"/>
+  <!-- app-killed chip, left corner of the floor -->
+  <g transform="translate(468,196)">
+    <rect width="106" height="30" rx="9" fill="#0E1524" stroke="#2A3A5C" stroke-width="1.1"/>
+    <circle cx="17" cy="15" r="5.6" fill="none" stroke="#FF6B5A" stroke-width="1.6"/>
+    <path d="M17 10.2 V15" stroke="#FF6B5A" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="30" y="19.6" font-size="11.5" font-weight="700" fill="#E8EDF7">app killed</text>
   </g>
 
-  <!-- connectors, drawn beneath the floating cards -->
-  <g stroke="#9DB0CE" stroke-width="1.3" fill="none">
-    <path d="M665 84 L665 96 L688 104"/>
-    <path d="M702 154 L722 142"/>
-    <path d="M600 112 L594 132"/>
-    <path d="M638 214 L644 190"/>
-  </g>
-  <g fill="#FFFFFF" stroke="#9DB0CE" stroke-width="1.3">
-    <rect x="661.5" y="92.5" width="7" height="7" rx="1.6"/>
-    <rect x="708.5" y="145.5" width="7" height="7" rx="1.6"/>
-    <rect x="593.5" y="118.5" width="7" height="7" rx="1.6"/>
-    <rect x="637.5" y="197.5" width="7" height="7" rx="1.6"/>
-  </g>
+  <!-- phone, lower right, iso like the floor -->
+  <g transform="translate(60,16)">
+    <g transform="matrix(0.866,0.5,-0.866,0.5,655,52)">
+      <g transform="translate(118,116)">
+        <rect x="-4" y="-6" width="72" height="132" rx="12" fill="#0B111E"/>
+        <rect x="0" y="0" width="64" height="120" rx="9" fill="#232F4C"/>
+        <rect x="4" y="5" width="56" height="110" rx="6" fill="#0F1830"/>
 
-  <!-- === the phone, floating over the fence centre === -->
-  <g filter="url(#soft)">
-    <g transform="translate(14,-52)">
-      <g transform="translate(0,10)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="65" y="30" width="60" height="116" rx="11" fill="#222B44"/>
+        <text x="10" y="19" font-size="9.5" font-weight="700" fill="#2DD4BF" letter-spacing="1">FENCES</text>
+
+        <g font-size="8.6" fill="#C8D3E8">
+          <circle cx="13" cy="32" r="2.6" fill="#2DD4BF"/>
+          <text x="20" y="35">warehouse</text>
+          <circle cx="13" cy="48" r="2.6" fill="none" stroke="#5A6C92" stroke-width="1.2"/>
+          <text x="20" y="51">depot</text>
+          <circle cx="13" cy="64" r="2.6" fill="none" stroke="#5A6C92" stroke-width="1.2"/>
+          <text x="20" y="67">job-site</text>
         </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="65" y="30" width="60" height="116" rx="11" fill="#2B3550"/>
-        <rect x="70" y="37" width="50" height="102" rx="6" fill="url(#screen)"/>
-
-        <text x="75" y="50" font-size="9" font-weight="700" fill="#1B2440">Places</text>
-
-        <rect x="75" y="56" width="40" height="30" rx="4" fill="#E7EFFD"/>
-        <circle cx="95" cy="71" r="11" fill="#17B8A6" fill-opacity="0.24" stroke="#17B8A6" stroke-width="1.3" stroke-dasharray="3 2.4"/>
-        <circle cx="95" cy="71" r="2.3" fill="#0E9E8E"/>
 
         <g>
-          <rect x="75" y="92" width="40" height="11" rx="3" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
-          <circle cx="81" cy="97.5" r="2.7" fill="#17B8A6"/>
-          <rect x="87" y="95" width="22" height="2.4" rx="1.2" fill="#41506F" opacity="0.7"/>
-          <rect x="87" y="99.4" width="14" height="2" rx="1" fill="#93A2BF" opacity="0.7"/>
-
-          <rect x="75" y="106" width="40" height="11" rx="3" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
-          <circle cx="81" cy="111.5" r="2.7" fill="#C3D0E6"/>
-          <rect x="87" y="109" width="18" height="2.4" rx="1.2" fill="#41506F" opacity="0.45"/>
-          <rect x="87" y="113.4" width="11" height="2" rx="1" fill="#93A2BF" opacity="0.5"/>
-
-          <rect x="75" y="120" width="40" height="11" rx="3" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
-          <circle cx="81" cy="125.5" r="2.7" fill="#C3D0E6"/>
-          <rect x="87" y="123" width="20" height="2.4" rx="1.2" fill="#41506F" opacity="0.45"/>
-          <rect x="87" y="127.4" width="9" height="2" rx="1" fill="#93A2BF" opacity="0.5"/>
+          <rect x="8" y="82" width="48" height="16" rx="8" fill="#2DD4BF" opacity="0.5" filter="url(#glow)"/>
+          <rect x="8" y="82" width="48" height="16" rx="8" fill="#2DD4BF"/>
+          <text x="32" y="93" font-size="8.6" font-weight="700" fill="#0B2422" text-anchor="middle">ENTER</text>
         </g>
+        <rect x="12" y="104" width="40" height="4" rx="2" fill="#1E2A47"/>
       </g>
     </g>
   </g>
 
-  <!-- === floating card: ENTER transition === -->
-  <g filter="url(#tight)">
-    <g transform="translate(0,-56)">
-      <g transform="translate(0,7)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="0" y="20" width="58" height="32" rx="7" fill="#E0553F"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="0" y="20" width="58" height="32" rx="7" fill="#FF6B5A"/>
-        <circle cx="10" cy="31" r="4" fill="#FFFFFF"/>
-        <text x="18" y="34.6" font-size="11" font-weight="700" fill="#FFFFFF">ENTER</text>
-        <rect x="8" y="41" width="42" height="2.6" rx="1.3" fill="#FFFFFF" opacity="0.5"/>
-      </g>
-    </g>
-  </g>
-
-  <!-- === floating card: HTTPS POST === -->
-  <g filter="url(#tight)">
-    <g transform="translate(0,-50)">
-      <g transform="translate(0,7)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="140" y="60" width="62" height="34" rx="7" fill="#2C55C9"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="140" y="60" width="62" height="34" rx="7" fill="#3B6FF5"/>
-        <text x="148" y="74" font-size="10" font-weight="700" fill="#FFFFFF">POST</text>
-        <rect x="148" y="79" width="44" height="2.6" rx="1.3" fill="#FFFFFF" opacity="0.45"/>
-        <rect x="148" y="84.5" width="28" height="2.4" rx="1.2" fill="#FFFFFF" opacity="0.32"/>
-        <g transform="translate(176,82)">
-          <rect width="22" height="9" rx="4.5" fill="#FFFFFF" opacity="0.92"/>
-          <text x="4.5" y="6.8" font-size="6" font-weight="700" fill="#2C55C9">200</text>
-        </g>
-      </g>
-    </g>
-  </g>
-
-  <!-- === floating card: registered fence === -->
-  <g filter="url(#tight)">
-    <g transform="translate(0,-56)">
-      <g transform="translate(0,7)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="-14" y="105" width="58" height="32" rx="7" fill="#C6D3EB"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="-14" y="105" width="58" height="32" rx="7" fill="#FFFFFF"/>
-        <circle cx="-4" cy="116" r="4" fill="#17B8A6" fill-opacity="0.25" stroke="#17B8A6" stroke-width="1.2"/>
-        <text x="4" y="119" font-size="9" font-weight="700" fill="#41506F">200 m</text>
-        <rect x="-6" y="125" width="40" height="2.6" rx="1.3" fill="#C6D3EB"/>
-        <rect x="-6" y="130" width="26" height="2.4" rx="1.2" fill="#DDE5F4"/>
-      </g>
-    </g>
-  </g>
-
-  <!-- === floating chip: process is dead, fence still armed === -->
-  <g filter="url(#tight)">
-    <g transform="translate(0,-8)">
-      <g transform="translate(0,6)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="118" y="148" width="60" height="26" rx="7" fill="#0F1526"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="118" y="148" width="60" height="26" rx="7" fill="#1B2440"/>
-        <circle cx="128" cy="160" r="4.2" fill="none" stroke="#FF6B5A" stroke-width="1.5"/>
-        <path d="M128 156.6 V160" stroke="#FF6B5A" stroke-width="1.5" stroke-linecap="round"/>
-        <text x="136" y="163.4" font-size="8.6" font-weight="700" fill="#FFFFFF">app killed</text>
-      </g>
-    </g>
-  </g>
+  <!-- annotation -->
+  <text x="850" y="322" font-size="15" font-weight="700" fill="#38BDF8" text-anchor="end">app killed → fence still fires</text>
+  <text x="850" y="341" font-size="12" fill="#64738F" text-anchor="end">POSTs to your server — zero PHP running</text>
 
 </svg>
