@@ -1,231 +1,152 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" font-family="Segoe UI, system-ui, sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1">
-      <stop offset="0" stop-color="#F3F7FF"/>
-      <stop offset="1" stop-color="#DCE5F7"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
     </linearGradient>
-    <linearGradient id="slabTop" x1="0" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#E6EDFA"/>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#818cf8"/>
     </linearGradient>
-    <linearGradient id="screen" x1="0" y1="0" x2="0.4" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#EDF3FF"/>
+    <linearGradient id="floorTop" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#1d2d4a"/>
+      <stop offset="1" stop-color="#121e34"/>
     </linearGradient>
-    <radialGradient id="sweep" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#0EA5E9" stop-opacity="0.26"/>
-      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0.02"/>
-    </radialGradient>
-    <radialGradient id="contact" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#5C6E90" stop-opacity="0.34"/>
-      <stop offset="1" stop-color="#5C6E90" stop-opacity="0"/>
-    </radialGradient>
-
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
-      <feOffset dy="11"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.20"/></feComponentTransfer>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    <linearGradient id="wallL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1526"/>
+      <stop offset="1" stop-color="#141f38"/>
+    </linearGradient>
+    <linearGradient id="wallR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1929"/>
+      <stop offset="1" stop-color="#182642"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="tight" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
-      <feOffset dy="6"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.24"/></feComponentTransfer>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="softglow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="shade" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <clipPath id="floorClip">
+      <polygon points="640,96 830,191 640,286 450,191"/>
+    </clipPath>
   </defs>
 
   <rect width="880" height="360" rx="18" fill="url(#bg)"/>
 
-  <!-- === LEFT: value proposition === -->
-  <text x="56" y="120" font-size="38" font-weight="700" fill="#1B2440">Every radio</text>
-  <text x="56" y="166" font-size="38" font-weight="700" fill="#0284C7">in the room.</text>
+  <!-- Left: the pitch -->
+  <text x="48" y="106" fill="#f8fafc" font-size="38" font-weight="700">See the WiFi</text>
+  <text x="48" y="152" fill="url(#accent)" font-size="38" font-weight="700">around you.</text>
+  <text x="48" y="194" fill="#94a3b8" font-size="17">Every access point in range — SSID, BSSID,</text>
+  <text x="48" y="220" fill="#94a3b8" font-size="17">signal — read straight from Laravel, and</text>
+  <text x="48" y="246" fill="#94a3b8" font-size="17">fingerprinted into a place you can recognise.</text>
 
-  <text x="57" y="207" font-size="14.5" fill="#5B6785">Scan every WiFi access point in range — SSID,</text>
-  <text x="57" y="228" font-size="14.5" fill="#5B6785">BSSID, signal, channel — straight from Laravel.</text>
-  <text x="57" y="249" font-size="14.5" fill="#5B6785">Android. No Kotlin, no GPS, no polling.</text>
+  <rect x="48" y="272" width="242" height="38" rx="10" fill="#020617" stroke="#334155"/>
+  <text x="66" y="296" fill="#38bdf8" font-size="15" font-family="Consolas, monospace">Wifi::scan();</text>
 
-  <g filter="url(#tight)">
-    <rect x="56" y="277" width="286" height="42" rx="10" fill="#1B2440"/>
+  <!-- Right: isometric diorama -->
+
+  <!-- back walls, rising from the two far edges of the slab -->
+  <polygon points="450,191 640,96 640,58 450,153" fill="url(#wallL)"/>
+  <polygon points="640,96 830,191 830,153 640,58" fill="url(#wallR)"/>
+  <polyline points="450,153 640,58 830,153" fill="none" stroke="#23324e" stroke-width="1.2"/>
+  <line x1="640" y1="96" x2="640" y2="58" stroke="#23324e" stroke-width="1.2"/>
+
+  <!-- floor slab: side faces, then top -->
+  <polygon points="450,191 640,286 640,301 450,206" fill="#0a1322"/>
+  <polygon points="640,286 830,191 830,206 640,301" fill="#0d182b"/>
+  <polygon points="640,96 830,191 640,286 450,191" fill="url(#floorTop)"/>
+
+  <!-- floor grid -->
+  <g stroke="#22314e" stroke-width="1" opacity="0.5" clip-path="url(#floorClip)">
+    <line x1="545" y1="143.5" x2="735" y2="238.5"/>
+    <line x1="592.5" y1="119.75" x2="782.5" y2="214.75"/>
+    <line x1="497.5" y1="167.25" x2="687.5" y2="262.25"/>
+    <line x1="735" y1="143.5" x2="545" y2="238.5"/>
+    <line x1="782.5" y1="167.25" x2="592.5" y2="262.25"/>
+    <line x1="687.5" y1="119.75" x2="497.5" y2="214.75"/>
   </g>
-  <text x="74" y="303" font-size="13.5" font-family="Consolas, Menlo, monospace" fill="#7DD3FC"><tspan fill="#FFB4A8">$networks</tspan> = Wifi::scan();</text>
 
-  <!-- === RIGHT: isometric diorama === -->
-
-  <!-- ground slab, 190x190 iso at (660,88) -->
-  <g filter="url(#soft)">
-    <g transform="translate(0,9)">
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect width="190" height="190" rx="15" fill="#BFCCE5"/>
-      </g>
+  <!-- signal rings on the floor -->
+  <g clip-path="url(#floorClip)" fill="none" stroke-width="1.6">
+    <g stroke="#38bdf8">
+      <ellipse cx="600" cy="150" rx="30" ry="15" opacity="0.6"/>
+      <ellipse cx="600" cy="150" rx="58" ry="29" opacity="0.36"/>
+      <ellipse cx="600" cy="150" rx="88" ry="44" opacity="0.17"/>
     </g>
-    <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-      <rect width="190" height="190" rx="15" fill="url(#slabTop)"/>
-      <g stroke="#CFDAEE" stroke-width="1.1" opacity="0.8">
-        <path d="M0 56 H190 M0 112 H190 M0 158 H190"/>
-        <path d="M48 0 V190 M104 0 V190 M152 0 V190"/>
-      </g>
-
-      <!-- radio sweep: rings on the ground plane -->
-      <g fill="none" stroke="#0EA5E9">
-        <circle cx="150" cy="140" r="38" fill="url(#sweep)" stroke-opacity="0.30" stroke-width="1.6"/>
-        <circle cx="150" cy="140" r="22" stroke-opacity="0.55" stroke-width="1.8"/>
-        <circle cx="52" cy="128" r="34" fill="url(#sweep)" stroke-opacity="0.26" stroke-width="1.5"/>
-        <circle cx="52" cy="128" r="19" stroke-opacity="0.5" stroke-width="1.7"/>
-      </g>
+    <g stroke="#818cf8">
+      <ellipse cx="772" cy="190" rx="27" ry="13.5" opacity="0.55"/>
+      <ellipse cx="772" cy="190" rx="52" ry="26" opacity="0.32"/>
+      <ellipse cx="772" cy="190" rx="79" ry="39.5" opacity="0.15"/>
     </g>
-  </g>
-
-  <!-- props: access points standing on the slab -->
-  <g transform="translate(668.7,233)">
-    <ellipse cx="0" cy="8" rx="15" ry="6" fill="url(#contact)"/>
-    <path d="M-5 -6 L-9 -17" stroke="#9DB0CE" stroke-width="1.7" stroke-linecap="round"/>
-    <path d="M5 -6 L9 -17" stroke="#9DB0CE" stroke-width="1.7" stroke-linecap="round"/>
-    <path d="M-12 -2 L0 4 L0 10 L-12 4 Z" fill="#C9D6EC"/>
-    <path d="M0 4 L12 -2 L12 4 L0 10 Z" fill="#B4C3E0"/>
-    <path d="M0 -8 L12 -2 L0 4 L-12 -2 Z" fill="#F0F5FF"/>
-    <circle cx="0" cy="-2" r="2.4" fill="#0EA5E9"/>
-  </g>
-  <g transform="translate(594.2,178)">
-    <ellipse cx="0" cy="7" rx="13" ry="5.4" fill="url(#contact)"/>
-    <path d="M-4 -5 L-8 -15" stroke="#9DB0CE" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M4 -5 L8 -15" stroke="#9DB0CE" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M-10 -2 L0 3 L0 8.5 L-10 3.5 Z" fill="#C9D6EC"/>
-    <path d="M0 3 L10 -2 L10 3.5 L0 8.5 Z" fill="#B4C3E0"/>
-    <path d="M0 -7 L10 -2 L0 3 L-10 -2 Z" fill="#F0F5FF"/>
-    <circle cx="0" cy="-2" r="2.1" fill="#0EA5E9"/>
-  </g>
-
-  <!-- connectors, drawn beneath the floating cards -->
-  <g stroke="#9DB0CE" stroke-width="1.3" fill="none">
-    <path d="M692 90 L678 82 L668 75"/>
-    <path d="M741 100 L736 85 L732 70"/>
-    <path d="M708 139 L714 148 L721 157"/>
-    <path d="M650 110 L628 111 L607 112"/>
-  </g>
-  <g fill="#FFFFFF" stroke="#9DB0CE" stroke-width="1.3">
-    <rect x="674.5" y="78.5" width="7" height="7" rx="1.6"/>
-    <rect x="732.5" y="81.5" width="7" height="7" rx="1.6"/>
-    <rect x="710.5" y="144.5" width="7" height="7" rx="1.6"/>
-    <rect x="624.5" y="107.5" width="7" height="7" rx="1.6"/>
-  </g>
-
-  <!-- === the phone, floating over the slab === -->
-  <g filter="url(#soft)">
-    <g transform="translate(16,-54)">
-      <g transform="translate(0,10)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="62" y="28" width="60" height="116" rx="11" fill="#222B44"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="62" y="28" width="60" height="116" rx="11" fill="#2B3550"/>
-        <rect x="67" y="35" width="50" height="102" rx="6" fill="url(#screen)"/>
-
-        <text x="72" y="48" font-size="9" font-weight="700" fill="#1B2440">Wi-Fi</text>
-
-        <rect x="72" y="54" width="40" height="30" rx="4" fill="#E7EFFD"/>
-        <g fill="none" stroke="#0EA5E9" stroke-linecap="round">
-          <path d="M85 76 A10 10 0 0 1 99 76" stroke-width="1.5" stroke-opacity="0.35"/>
-          <path d="M88 73 A6.4 6.4 0 0 1 96 73" stroke-width="1.5" stroke-opacity="0.6"/>
-        </g>
-        <circle cx="92" cy="77.5" r="2.3" fill="#0284C7"/>
-
-        <rect x="72" y="90" width="40" height="11" rx="3" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
-        <circle cx="78" cy="95.5" r="2.7" fill="#0EA5E9"/>
-        <rect x="84" y="93" width="20" height="2.4" rx="1.2" fill="#41506F" opacity="0.7"/>
-        <rect x="84" y="97.4" width="13" height="2" rx="1" fill="#93A2BF" opacity="0.7"/>
-
-        <rect x="72" y="104" width="40" height="11" rx="3" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
-        <circle cx="78" cy="109.5" r="2.7" fill="#7DD3FC"/>
-        <rect x="84" y="107" width="17" height="2.4" rx="1.2" fill="#41506F" opacity="0.45"/>
-        <rect x="84" y="111.4" width="10" height="2" rx="1" fill="#93A2BF" opacity="0.5"/>
-
-        <rect x="72" y="118" width="40" height="11" rx="3" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.8"/>
-        <circle cx="78" cy="123.5" r="2.7" fill="#C3D0E6"/>
-        <rect x="84" y="121" width="19" height="2.4" rx="1.2" fill="#41506F" opacity="0.45"/>
-        <rect x="84" y="125.4" width="8" height="2" rx="1" fill="#93A2BF" opacity="0.5"/>
-      </g>
+    <g stroke="#38bdf8">
+      <ellipse cx="521" cy="208" rx="25" ry="12.5" opacity="0.5"/>
+      <ellipse cx="521" cy="208" rx="48" ry="24" opacity="0.28"/>
+      <ellipse cx="521" cy="208" rx="73" ry="36.5" opacity="0.13"/>
     </g>
   </g>
 
-  <!-- === card: the one call that starts the sweep === -->
-  <g filter="url(#tight)">
-    <g transform="translate(0,-62)">
-      <g transform="translate(0,7)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="-6" y="10" width="60" height="32" rx="7" fill="#0284C7"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="-6" y="10" width="60" height="32" rx="7" fill="#0EA5E9"/>
-        <g fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round">
-          <path d="M2 24 A9 9 0 0 1 15 24"/>
-          <path d="M5 27.4 A5 5 0 0 1 12 27.4"/>
-        </g>
-        <circle cx="8.5" cy="30.4" r="1.9" fill="#FFFFFF"/>
-        <text x="21" y="27" font-size="11" font-weight="700" fill="#FFFFFF">SCAN</text>
-        <rect x="21" y="31" width="26" height="2.6" rx="1.3" fill="#FFFFFF" opacity="0.5"/>
-      </g>
-    </g>
+  <!-- router A -->
+  <g>
+    <polygon points="600,130 614,137 600,144 586,137" fill="#3d5075"/>
+    <polygon points="586,137 600,144 600,154 586,147" fill="#19233d"/>
+    <polygon points="600,144 614,137 614,147 600,154" fill="#24334f"/>
+    <line x1="594" y1="134" x2="590" y2="123" stroke="#64748b" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="606" y1="134" x2="610" y2="123" stroke="#64748b" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="600" cy="137" r="2.6" fill="#38bdf8" filter="url(#glow)"/>
+  </g>
+  <!-- router B -->
+  <g>
+    <polygon points="772,170 786,177 772,184 758,177" fill="#3d5075"/>
+    <polygon points="758,177 772,184 772,194 758,187" fill="#19233d"/>
+    <polygon points="772,184 786,177 786,187 772,194" fill="#24334f"/>
+    <line x1="766" y1="174" x2="762" y2="163" stroke="#64748b" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="778" y1="174" x2="782" y2="163" stroke="#64748b" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="772" cy="177" r="2.6" fill="#818cf8" filter="url(#glow)"/>
+  </g>
+  <!-- router C -->
+  <g>
+    <polygon points="521,188 535,195 521,202 507,195" fill="#3d5075"/>
+    <polygon points="507,195 521,202 521,212 507,205" fill="#19233d"/>
+    <polygon points="521,202 535,195 535,205 521,212" fill="#24334f"/>
+    <line x1="515" y1="192" x2="511" y2="181" stroke="#64748b" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="527" y1="192" x2="531" y2="181" stroke="#64748b" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="521" cy="195" r="2.6" fill="#38bdf8" filter="url(#glow)"/>
   </g>
 
-  <!-- === card: fresh results arrive as an event === -->
-  <g filter="url(#tight)">
-    <g transform="translate(0,-96)">
-      <g transform="translate(0,7)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="108" y="-4" width="76" height="30" rx="7" fill="#E0553F"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="108" y="-4" width="76" height="30" rx="7" fill="#FF6B5A"/>
-        <path d="M120 4 L115 12 H119 L117.5 18 L123 10 H119 Z" fill="#FFFFFF"/>
-        <text x="127" y="13.6" font-size="11" font-weight="700" fill="#FFFFFF">EVENT</text>
-        <rect x="127" y="17" width="42" height="2.6" rx="1.3" fill="#FFFFFF" opacity="0.5"/>
-      </g>
+  <!-- contact shadow under the phone -->
+  <ellipse cx="662" cy="244" rx="82" ry="42" fill="#050a14" opacity="0.75" filter="url(#shade)"/>
+
+  <!-- the phone, lying on the floor in isometric -->
+  <g transform="translate(690,186) matrix(1,0.5,-1,0.5,0,0)">
+    <g filter="url(#softglow)">
+      <rect x="0" y="0" width="68" height="128" rx="11" fill="#020617" stroke="#3b4a63" stroke-width="1.6"/>
     </g>
+    <rect x="5" y="6" width="58" height="116" rx="7" fill="#0b1120"/>
+
+    <text x="11" y="21" fill="#7dd3fc" font-size="8" font-weight="700">NETWORKS</text>
+
+    <rect x="10" y="28" width="48" height="21" rx="4.5" fill="#16233c"/>
+    <text x="14" y="42" fill="#e2e8f0" font-size="7.4">office-5g</text>
+    <g fill="#38bdf8"><rect x="45" y="39" width="2.4" height="5"/><rect x="48.8" y="36.5" width="2.4" height="7.5"/><rect x="52.6" y="34" width="2.4" height="10"/></g>
+
+    <rect x="10" y="53" width="48" height="21" rx="4.5" fill="#16233c"/>
+    <text x="14" y="67" fill="#e2e8f0" font-size="7.4">cafe-wifi</text>
+    <g fill="#38bdf8"><rect x="45" y="64" width="2.4" height="5"/><rect x="48.8" y="61.5" width="2.4" height="7.5"/><rect x="52.6" y="59" width="2.4" height="10" opacity="0.24"/></g>
+
+    <rect x="10" y="78" width="48" height="21" rx="4.5" fill="#16233c"/>
+    <text x="14" y="92" fill="#e2e8f0" font-size="7.4">linksys</text>
+    <g fill="#38bdf8"><rect x="45" y="89" width="2.4" height="5"/><rect x="48.8" y="86.5" width="2.4" height="7.5" opacity="0.24"/><rect x="52.6" y="84" width="2.4" height="10" opacity="0.24"/></g>
+
+    <rect x="10" y="103" width="48" height="14" rx="4" fill="#0f2438" stroke="#1f4f6b" stroke-width="0.8"/>
+    <text x="14" y="113" fill="#38bdf8" font-size="6.8" font-family="Consolas, monospace">a3f9·c17d</text>
   </g>
 
-  <!-- === card: the ranked list handed back to PHP === -->
-  <g filter="url(#tight)">
-    <g transform="translate(0,-40)">
-      <g transform="translate(0,7)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="146" y="74" width="68" height="42" rx="7" fill="#2C55C9"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="146" y="74" width="68" height="42" rx="7" fill="#3B6FF5"/>
-        <text x="154" y="88" font-size="10" font-weight="700" fill="#FFFFFF">SSID</text>
-        <g>
-          <rect x="154" y="93" width="34" height="2.8" rx="1.4" fill="#FFFFFF" opacity="0.85"/>
-          <g fill="#FFFFFF"><rect x="192" y="92.6" width="2.2" height="3.6"/><rect x="195.6" y="91.2" width="2.2" height="5"/><rect x="199.2" y="89.8" width="2.2" height="6.4"/></g>
-          <rect x="154" y="99.5" width="27" height="2.8" rx="1.4" fill="#FFFFFF" opacity="0.62"/>
-          <g fill="#FFFFFF"><rect x="192" y="99.1" width="2.2" height="3.6"/><rect x="195.6" y="97.7" width="2.2" height="5"/><rect x="199.2" y="96.3" width="2.2" height="6.4" opacity="0.35"/></g>
-          <rect x="154" y="106" width="31" height="2.8" rx="1.4" fill="#FFFFFF" opacity="0.45"/>
-          <g fill="#FFFFFF"><rect x="192" y="105.6" width="2.2" height="3.6"/><rect x="195.6" y="104.2" width="2.2" height="5" opacity="0.35"/><rect x="199.2" y="102.8" width="2.2" height="6.4" opacity="0.35"/></g>
-        </g>
-      </g>
-    </g>
-  </g>
-
-  <!-- === chip: the signal reading itself === -->
-  <g filter="url(#tight)">
-    <g transform="translate(0,-34)">
-      <g transform="translate(0,6)">
-        <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-          <rect x="-30" y="92" width="56" height="26" rx="7" fill="#C6D3EB"/>
-        </g>
-      </g>
-      <g transform="matrix(0.866,0.5,-0.866,0.5,660,88)">
-        <rect x="-30" y="92" width="56" height="26" rx="7" fill="#FFFFFF"/>
-        <circle cx="-21" cy="103" r="4" fill="#0EA5E9" fill-opacity="0.25" stroke="#0EA5E9" stroke-width="1.2"/>
-        <text x="-13" y="106" font-size="9" font-weight="700" fill="#41506F">-52 dBm</text>
-        <rect x="-22" y="111" width="38" height="2.4" rx="1.2" fill="#DDE5F4"/>
-      </g>
-    </g>
-  </g>
-
+  <!-- caption -->
+  <text x="832" y="322" fill="#7dd3fc" font-size="12.5" font-weight="600" text-anchor="end">3 radios in range → 1 place fingerprint</text>
+  <text x="832" y="339" fill="#64748b" font-size="11" text-anchor="end">no GPS, no battery drain, works indoors</text>
 </svg>
