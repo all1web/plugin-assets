@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360">
+  <!-- === actions-anywhere hero, isometric-diorama system (plugin-assets/STYLE.md) === -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3F7FF"/>
+      <stop offset="1" stop-color="#DCE5F7"/>
+    </linearGradient>
+    <linearGradient id="slab" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E6EDFA"/>
+    </linearGradient>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="880" height="360" fill="url(#bg)"/>
+
+  <!-- === left third: headline, body, code chip === -->
+  <text x="44" y="88" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="44" font-weight="700" fill="#1B2440">Actions</text>
+  <text x="44" y="136" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="44" font-weight="700" fill="#6366F1">Anywhere!</text>
+
+  <text x="44" y="174" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#5B6785">Siri, Spotlight, Quick Settings, NFC &amp; QR —</text>
+  <text x="44" y="196" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#5B6785">every OS surface runs your Laravel code.</text>
+  <text x="44" y="218" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" fill="#5B6785">One config. No Swift, no Kotlin, no Xcode.</text>
+
+  <rect x="44" y="244" width="256" height="60" rx="10" fill="#1B2440"/>
+  <text x="60" y="270" font-family="Consolas, Menlo, monospace" font-size="12" fill="#9FE8B8">'phrases' =&gt; [</text>
+  <text x="60" y="290" font-family="Consolas, Menlo, monospace" font-size="12" fill="#E4E7F5">  'Log water in ${applicationName}']</text>
+
+  <!-- === diorama: ground slab === -->
+  <g transform="translate(596,166)">
+    <g transform="translate(0,9)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,0,0)">
+        <rect x="-150" y="-104" width="300" height="208" rx="24" fill="#BFCCE5"/>
+      </g>
+    </g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,0,0)">
+      <rect x="-150" y="-104" width="300" height="208" rx="24" fill="url(#slab)"/>
+    </g>
+  </g>
+
+  <!-- === prop on the slab === -->
+  <ellipse cx="618" cy="254" rx="12" ry="4" fill="#1B2440" opacity="0.08"/>
+  <rect x="614" y="232" width="6" height="20" rx="3" fill="#BFCCE5"/>
+  <circle cx="617" cy="226" r="11" fill="#9DB0CE"/>
+
+  <!-- === connectors (phone to cards), nodes on both ends === -->
+  <g stroke="#9DB0CE" stroke-width="1.5" fill="none">
+    <path d="M536 160 L466 118"/>
+    <path d="M646 138 L716 108"/>
+    <path d="M650 196 L738 216"/>
+    <path d="M540 208 L474 240"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#9DB0CE" stroke-width="1.2">
+    <rect x="533" y="157" width="6" height="6"/>
+    <rect x="463" y="115" width="6" height="6"/>
+    <rect x="643" y="135" width="6" height="6"/>
+    <rect x="713" y="105" width="6" height="6"/>
+    <rect x="647" y="193" width="6" height="6"/>
+    <rect x="735" y="213" width="6" height="6"/>
+    <rect x="537" y="205" width="6" height="6"/>
+    <rect x="471" y="237" width="6" height="6"/>
+  </g>
+
+  <!-- === phone: contact shadow, thickness, top face === -->
+  <ellipse cx="562" cy="222" rx="76" ry="19" fill="#1B2440" opacity="0.10"/>
+  <g transform="translate(592,150)">
+    <g transform="translate(0,8)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,0,0)">
+        <rect x="-52" y="-88" width="104" height="176" rx="16" fill="#101830"/>
+      </g>
+    </g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,0,0)">
+      <rect x="-52" y="-88" width="104" height="176" rx="16" fill="#1B2440"/>
+      <rect x="-44" y="-78" width="88" height="156" rx="10" fill="#2A3358"/>
+      <rect x="-34" y="-64" width="68" height="9" rx="4.5" fill="#C3D0E6"/>
+      <rect x="-34" y="-46" width="52" height="9" rx="4.5" fill="#9DB0CE"/>
+      <rect x="-34" y="-28" width="60" height="9" rx="4.5" fill="#C3D0E6"/>
+      <circle cx="0" cy="42" r="18" fill="url(#orb)"/>
+      <circle cx="0" cy="42" r="10" fill="#A5B4FC" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- === card: Siri (voice) === -->
+  <g transform="translate(432,86)">
+    <g transform="translate(0,6)"><g transform="matrix(0.866,0.5,-0.866,0.5,0,0)"><rect x="-52" y="-34" width="104" height="68" rx="10" fill="#BFCCE5"/></g></g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,0,0)">
+      <rect x="-52" y="-34" width="104" height="68" rx="10" fill="#FFFFFF"/>
+      <circle cx="-30" cy="-6" r="13" fill="url(#orb)"/>
+      <rect x="-10" y="-13" width="5" height="14" rx="2.5" fill="#6366F1"/>
+      <rect x="-1" y="-19" width="5" height="26" rx="2.5" fill="#6366F1"/>
+      <rect x="8" y="-15" width="5" height="18" rx="2.5" fill="#818CF8"/>
+      <rect x="17" y="-10" width="5" height="8" rx="2.5" fill="#C3D0E6"/>
+      <text x="-46" y="26" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B2440">Siri</text>
+    </g>
+  </g>
+
+  <!-- === card: Spotlight (search) === -->
+  <g transform="translate(756,76)">
+    <g transform="translate(0,6)"><g transform="matrix(0.866,0.5,-0.866,0.5,0,0)"><rect x="-52" y="-34" width="104" height="68" rx="10" fill="#BFCCE5"/></g></g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,0,0)">
+      <rect x="-52" y="-34" width="104" height="68" rx="10" fill="#FFFFFF"/>
+      <rect x="-42" y="-18" width="84" height="16" rx="8" fill="#EDF2FC" stroke="#C3D0E6" stroke-width="1.5"/>
+      <circle cx="-30" cy="-10" r="5" fill="none" stroke="#6366F1" stroke-width="2.5"/>
+      <path d="M-26 -6 L-22 -2" stroke="#6366F1" stroke-width="2.5"/>
+      <rect x="-18" y="-14" width="44" height="7" rx="3.5" fill="#C3D0E6"/>
+      <text x="-46" y="26" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B2440">Spotlight</text>
+    </g>
+  </g>
+
+  <!-- === card: Quick Settings tiles === -->
+  <g transform="translate(786,196)">
+    <g transform="translate(0,6)"><g transform="matrix(0.866,0.5,-0.866,0.5,0,0)"><rect x="-52" y="-34" width="104" height="68" rx="10" fill="#BFCCE5"/></g></g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,0,0)">
+      <rect x="-52" y="-34" width="104" height="68" rx="10" fill="#FFFFFF"/>
+      <rect x="-40" y="-24" width="26" height="18" rx="9" fill="#6366F1"/>
+      <path d="M-29 -20 L-33 -14 L-29 -14 L-31 -9 L-25 -16 L-29 -16 Z" fill="#FFFFFF"/>
+      <rect x="-8" y="-24" width="26" height="18" rx="9" fill="#C3D0E6"/>
+      <rect x="24" y="-24" width="26" height="18" rx="9" fill="#C3D0E6"/>
+      <text x="-46" y="26" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B2440">Tiles</text>
+    </g>
+  </g>
+
+  <!-- === card: NFC and QR === -->
+  <g transform="translate(440,266)">
+    <g transform="translate(0,6)"><g transform="matrix(0.866,0.5,-0.866,0.5,0,0)"><rect x="-52" y="-34" width="104" height="68" rx="10" fill="#BFCCE5"/></g></g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,0,0)">
+      <rect x="-52" y="-34" width="104" height="68" rx="10" fill="#FFFFFF"/>
+      <g fill="#1B2440">
+        <rect x="-40" y="-24" width="9" height="9"/>
+        <rect x="-27" y="-24" width="4" height="4"/>
+        <rect x="-20" y="-24" width="9" height="9"/>
+        <rect x="-40" y="-11" width="4" height="4"/>
+        <rect x="-33" y="-13" width="5" height="6"/>
+        <rect x="-24" y="-11" width="8" height="4"/>
+        <rect x="-40" y="-3" width="9" height="7"/>
+        <rect x="-26" y="-4" width="4" height="8"/>
+        <rect x="-18" y="-3" width="7" height="7"/>
+      </g>
+      <path d="M14 -22 A 22 22 0 0 1 14 4" fill="none" stroke="#6366F1" stroke-width="3"/>
+      <path d="M8 -16 A 13 13 0 0 1 8 -2" fill="none" stroke="#818CF8" stroke-width="3"/>
+      <circle cx="4" cy="-9" r="3.5" fill="#6366F1"/>
+      <text x="-46" y="26" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B2440">NFC + QR</text>
+    </g>
+  </g>
+</svg>
