@@ -1,62 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="150" viewBox="0 0 880 150">
   <defs>
-    <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0f1023"/>
-      <stop offset="1" stop-color="#171236"/>
+      <stop offset="1" stop-color="#1c1440"/>
     </linearGradient>
     <linearGradient id="fsiri" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#3ddcff"/>
-      <stop offset="1" stop-color="#7a5cff"/>
+      <stop offset="0.5" stop-color="#7a5cff"/>
+      <stop offset="1" stop-color="#ff5ca8"/>
     </linearGradient>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#7a5cff"/>
-    </marker>
+    <linearGradient id="fcard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#23244a"/>
+      <stop offset="1" stop-color="#181a38"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1280" height="360" fill="url(#fbg)"/>
+  <rect width="880" height="150" fill="url(#fbg)"/>
 
-  <!-- Stage 1: config -->
-  <g transform="translate(50, 90)">
-    <rect rx="16" width="250" height="170" fill="#181a38" stroke="#34375f" stroke-width="2"/>
-    <text x="20" y="38" font-family="Consolas, Menlo, monospace" font-size="16" fill="#8a8fc0">config/appintents.php</text>
-    <text x="20" y="72" font-family="Consolas, Menlo, monospace" font-size="16" fill="#7ee0a3">'log-water' =&gt; [</text>
-    <text x="36" y="100" font-family="Consolas, Menlo, monospace" font-size="16" fill="#d8d9f0">'phrases' =&gt; [...],</text>
-    <text x="36" y="128" font-family="Consolas, Menlo, monospace" font-size="16" fill="#d8d9f0">'handler' =&gt; ...,</text>
-    <text x="20" y="156" font-family="Consolas, Menlo, monospace" font-size="16" fill="#7ee0a3">]</text>
-    <text x="125" y="205" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">You write config</text>
+  <!-- 1. config -->
+  <rect x="24" y="26" rx="12" ry="12" width="182" height="82" fill="#0f1023" stroke="#34375f" stroke-width="1.5"/>
+  <text x="40" y="49" font-family="Consolas, Menlo, monospace" font-size="11" fill="#8a8fc0">config/appintents.php</text>
+  <text x="40" y="70" font-family="Consolas, Menlo, monospace" font-size="11.5" fill="#7ee0a3">'log-water' =&gt; [</text>
+  <text x="51" y="87" font-family="Consolas, Menlo, monospace" font-size="11.5" fill="#d8d9f0">'phrases' =&gt; [...],</text>
+  <text x="40" y="102" font-family="Consolas, Menlo, monospace" font-size="11.5" fill="#7ee0a3">]</text>
+  <text x="115" y="130" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" fill="#b9bce0">You write config</text>
+
+  <g stroke="#7a5cff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M218 67 L250 67"/><path d="M243 61 L251 67 L243 73"/>
   </g>
 
-  <path d="M310 175 L365 175" stroke="#7a5cff" stroke-width="4" marker-end="url(#arrow)"/>
+  <!-- 2. build -->
+  <rect x="262" y="26" rx="12" ry="12" width="166" height="82" fill="url(#fcard)" stroke="#3a3d6e" stroke-width="1.5"/>
+  <text x="345" y="60" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">native:run</text>
+  <text x="345" y="80" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" fill="#9aa0d0">build hook compiles</text>
+  <text x="345" y="96" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" fill="#9aa0d0">native App Intents</text>
+  <text x="345" y="130" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" fill="#b9bce0">We compile it in</text>
 
-  <!-- Stage 2: build -->
-  <g transform="translate(375, 90)">
-    <rect rx="16" width="230" height="170" fill="#181a38" stroke="#34375f" stroke-width="2"/>
-    <text x="115" y="72" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff">native:run ios</text>
-    <text x="115" y="104" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#9aa0d0">build hook generates</text>
-    <text x="115" y="128" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#9aa0d0">native App Intents</text>
-    <text x="115" y="205" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">We compile it in</text>
+  <g stroke="#7a5cff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M440 67 L472 67"/><path d="M465 61 L473 67 L465 73"/>
   </g>
 
-  <path d="M615 175 L670 175" stroke="#7a5cff" stroke-width="4" marker-end="url(#arrow)"/>
+  <!-- 3. surfaces -->
+  <rect x="484" y="20" rx="12" ry="12" width="212" height="94" fill="#1d2a5e" stroke="url(#fsiri)" stroke-width="2"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#ffffff">
+    <circle cx="506" cy="41" r="6" fill="url(#fsiri)"/>
+    <text x="520" y="45">Siri phrases</text>
+    <circle cx="506" cy="63" r="6" fill="#7a5cff"/>
+    <text x="520" y="67">Spotlight &#183; Shortcuts</text>
+    <circle cx="506" cy="85" r="6" fill="#3ddcff"/>
+    <text x="520" y="89">Tiles &#183; NFC &#183; QR</text>
+  </g>
+  <text x="590" y="130" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" fill="#b9bce0">Every OS surface</text>
 
-  <!-- Stage 3: OS surfaces -->
-  <g transform="translate(680, 90)">
-    <rect rx="16" width="250" height="170" fill="#1d2a5e" stroke="url(#fsiri)" stroke-width="2.5"/>
-    <text x="125" y="46" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff">&#127908; Siri phrases</text>
-    <text x="125" y="80" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff">&#128269; Spotlight</text>
-    <text x="125" y="114" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff">&#127899;&#65039; Quick Settings</text>
-    <text x="125" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff">&#127991;&#65039; NFC &#183; QR &#183; links</text>
-    <text x="125" y="205" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">Every OS surface</text>
+  <g stroke="#7a5cff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M708 67 L740 67"/><path d="M733 61 L741 67 L733 73"/>
   </g>
 
-  <path d="M940 175 L995 175" stroke="#7a5cff" stroke-width="4" marker-end="url(#arrow)"/>
-
-  <!-- Stage 4: Laravel -->
-  <g transform="translate(1005, 90)">
-    <rect rx="16" width="230" height="170" fill="#181a38" stroke="#34375f" stroke-width="2"/>
-    <text x="115" y="66" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="17" fill="#ff6b81">LogWater::class</text>
-    <text x="115" y="100" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#9aa0d0">invocation drained,</text>
-    <text x="115" y="124" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#9aa0d0">handler runs in PHP</text>
-    <text x="115" y="205" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">Your Laravel code runs</text>
-  </g>
+  <!-- 4. handler -->
+  <rect x="752" y="26" rx="12" ry="12" width="104" height="82" fill="#0f1023" stroke="#34375f" stroke-width="1.5"/>
+  <text x="804" y="60" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="11.5" fill="#ff8fb0">LogWater</text>
+  <text x="804" y="80" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#9aa0d0">your handler,</text>
+  <text x="804" y="95" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#9aa0d0">plain PHP</text>
+  <text x="804" y="130" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" fill="#b9bce0">Laravel runs it</text>
 </svg>
