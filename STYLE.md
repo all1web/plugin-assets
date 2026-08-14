@@ -106,6 +106,19 @@ magick -density 192 flow.svg -resize 1760x300 flow.png
 Canonical sizes: **hero 1760×720**, **flow 1760×300** (2× of the 880-wide
 viewBox).
 
+**Stacked heroes.** A hero may run taller than 360 when the plugin's story
+needs more than one scene: keep the 880 width and add whole 360-tall panels
+below, each with its own eyebrow, headline, scene and annotation, separated
+by the faded hairline rule. `actions-anywhere` is the first (880×1080 →
+2× 1760×2160: promise, then iOS Spotlight, then Android Quick Settings).
+Two things to get right: rasterize with no `-resize` so the density alone
+sets the size, and **repair the seam** — restarting the `bg` gradient per
+panel leaves a step of roughly 14/255 in blue, so fade a matched tint back
+in over the first ~80px of each lower panel (see `seamFix` in
+`actions-anywhere/hero.svg`). Only reach for this when a single panel
+genuinely cannot carry the story; the marketplace grid is built for
+banners, so a tall hero is a deliberate trade (see the note in README).
+
 ## Rules the renderer enforces
 
 ImageMagick rasterizes through **librsvg 2.40**, which is strict and old:
@@ -159,7 +172,7 @@ to render.
 | wifi-scan | ✅ dark (iso floor) | (check) |
 | share-target | ⚠️ legacy light-iso | ✅ dark |
 | geofence | ✅ dark (SVG master) | ✅ dark (SVG master) |
-| app-intents | ✖ missing | ✖ missing |
+| actions-anywhere | ✅ dark, 880×1080 stacked (SVG master) | ✅ dark (SVG master) |
 
 Legacy light-iso pieces get redrawn with the prompt above — but **don't churn
 art for a listing that's mid-review** (share-target); redraw after approval.

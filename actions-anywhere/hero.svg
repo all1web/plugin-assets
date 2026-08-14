@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="1080" viewBox="0 0 880 1080">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0f1023"/>
@@ -13,21 +13,67 @@
       <stop offset="0" stop-color="#23244a"/>
       <stop offset="1" stop-color="#181a38"/>
     </linearGradient>
+
+    <linearGradient id="enumA" x1="56" y1="0" x2="404" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3ddcff"/>
+      <stop offset="0.5" stop-color="#7a5cff"/>
+      <stop offset="1" stop-color="#ff5ca8"/>
+    </linearGradient>
+    <linearGradient id="enumB" x1="56" y1="0" x2="470" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3ddcff"/>
+      <stop offset="0.5" stop-color="#7a5cff"/>
+      <stop offset="1" stop-color="#ff5ca8"/>
+    </linearGradient>
+    <linearGradient id="headMid" x1="56" y1="0" x2="312" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3ddcff"/>
+      <stop offset="0.55" stop-color="#7a5cff"/>
+      <stop offset="1" stop-color="#ff5ca8"/>
+    </linearGradient>
+    <linearGradient id="headBot" x1="56" y1="0" x2="296" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3ddcff"/>
+      <stop offset="0.55" stop-color="#7a5cff"/>
+      <stop offset="1" stop-color="#ff5ca8"/>
+    </linearGradient>
+    <!-- each panel restarts the canvas gradient, which leaves a step at the seam.
+         this fades the panel below back up to the edge colour of the panel above. -->
+    <linearGradient id="seamFix" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4C229E" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#4C229E" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="56" y1="0" x2="824" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7a5cff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#7a5cff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#7a5cff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="aaGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+    <filter id="aaSoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="11"/>
+    </filter>
+    <filter id="aaCast" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7"/>
+    </filter>
   </defs>
 
   <rect width="880" height="360" fill="url(#bg)"/>
 
+  <!-- === TOP THIRD: the promise + the six ways in === -->
+
   <!-- Title block -->
   <text x="56" y="86" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Actions Anywhere!</text>
-  <text x="56" y="120" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" fill="#b9bce0">Siri &#183; Spotlight &#183; Quick Settings &#183; NFC &amp; QR</text>
-  <text x="56" y="147" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" fill="#b9bce0">One Laravel config. No Swift, no Kotlin.</text>
+  <text x="56" y="122" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="23" font-weight="600" fill="url(#enumA)">Siri &#183; Shortcuts app &#183; Spotlight</text>
+  <text x="56" y="152" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="23" font-weight="600" fill="url(#enumB)">Quick Settings &#183; NFC &#183; QR &#183; routines</text>
+  <text x="56" y="178" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15.5" fill="#b9bce0">One action, every way in. One Laravel config.</text>
+  <text x="56" y="198" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15.5" fill="#b9bce0">No Swift, no Kotlin, no Xcode project surgery.</text>
 
   <!-- Spoken phrase bubble -->
-  <rect x="56" y="180" rx="19" ry="19" width="392" height="46" fill="#ffffff" opacity="0.09"/>
-  <text x="78" y="209" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#ffffff">&#8220;Hey Siri, log water in <tspan font-weight="700">YourApp</tspan>&#8221;</text>
+  <rect x="56" y="212" rx="19" ry="19" width="392" height="42" fill="#ffffff" opacity="0.09"/>
+  <text x="78" y="239" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16.5" fill="#ffffff">&#8220;Hey Siri, log water in <tspan font-weight="700">YourApp</tspan>&#8221;</text>
 
   <!-- Siri waveform -->
-  <g transform="translate(56, 254)">
+  <g transform="translate(56, 258)">
     <path d="M0 22 Q 21 -6, 42 22 T 84 22 T 126 22 T 168 22 T 210 22 T 252 22 T 294 22 T 336 22"
           fill="none" stroke="url(#siri)" stroke-width="5" stroke-linecap="round"/>
     <path d="M0 22 Q 21 50, 42 22 T 84 22 T 126 22 T 168 22 T 210 22 T 252 22 T 294 22 T 336 22"
@@ -35,8 +81,8 @@
   </g>
 
   <!-- Reply -->
-  <rect x="56" y="300" rx="15" ry="15" width="176" height="38" fill="url(#siri)" opacity="0.22"/>
-  <text x="78" y="325" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#ffffff">&#8220;Logged.&#8221;</text>
+  <rect x="56" y="302" rx="15" ry="15" width="176" height="36" fill="url(#siri)" opacity="0.22"/>
+  <text x="78" y="326" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#ffffff">&#8220;Logged.&#8221;</text>
 
   <!-- Surface icon column: the six ways in, bridging copy and device -->
   <g transform="translate(512, 0)">
@@ -129,4 +175,210 @@
     <text x="74" y="283" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Start workout</text>
     <text x="74" y="301" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" fill="#9aa0d0">Opens the app</text>
   </g>
+
+  <!-- === MIDDLE THIRD: iOS, Spotlight and the Shortcuts app === -->
+
+  <rect y="360" width="880" height="360" fill="url(#bg)"/>
+  <rect y="360" width="880" height="80" fill="url(#seamFix)"/>
+  <rect x="56" y="362" width="768" height="1" fill="url(#rule)"/>
+
+  <ellipse cx="650" cy="520" rx="158" ry="106" fill="#7a5cff" opacity="0.11" filter="url(#aaSoft)"/>
+
+  <!-- eyebrow -->
+  <rect x="56" y="392" width="4" height="15" rx="2" fill="url(#siri)"/>
+  <text x="70" y="404" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="2.4" fill="#3ddcff">iOS &#183; APP INTENTS</text>
+
+  <!-- headline -->
+  <text x="56" y="446" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Your actions are</text>
+  <text x="56" y="482" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="url(#headMid)">search results.</text>
+
+  <!-- body -->
+  <text x="56" y="514" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b9bce0">Search the phone for your app and the actions</text>
+  <text x="56" y="536" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b9bce0">come up as tappable rows. They are automation</text>
+  <text x="56" y="558" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b9bce0">blocks in the Shortcuts app too &#8212; from install.</text>
+
+  <!-- surface pills -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">
+    <rect x="56" y="580" width="52" height="28" rx="14" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+    <text x="82" y="598.5" text-anchor="middle" fill="#d8d9f0">Siri</text>
+    <rect x="118" y="580" width="112" height="28" rx="14" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+    <text x="174" y="598.5" text-anchor="middle" fill="#d8d9f0">Shortcuts app</text>
+    <rect x="240" y="580" width="86" height="28" rx="14" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+    <text x="283" y="598.5" text-anchor="middle" fill="#d8d9f0">Spotlight</text>
+  </g>
+
+  <!-- code chip -->
+  <rect x="56" y="620" width="372" height="40" rx="10" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+  <text x="74" y="645" font-family="Consolas, Menlo, monospace" font-size="12"><tspan fill="#7ee0a3">'title'</tspan><tspan fill="#8a8fc0"> =&gt; </tspan><tspan fill="#d8d9f0">'Log water',</tspan><tspan fill="#8a8fc0">   // the Spotlight row</tspan></text>
+
+  <!-- Spotlight search sheet -->
+  <g>
+    <rect x="474" y="400" width="354" height="262" rx="22" fill="#000000" opacity="0.4" filter="url(#aaCast)"/>
+    <rect x="470" y="392" width="354" height="262" rx="22" fill="url(#phone)" stroke="#3a3d6e" stroke-width="1.8"/>
+
+    <!-- search field -->
+    <rect x="486" y="408" width="322" height="38" rx="12" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+    <g transform="translate(508, 427)" stroke="#8a8fc0" fill="none">
+      <circle cx="-1.5" cy="-1.5" r="5.5" stroke-width="2"/>
+      <path d="M2.6 2.6 L7.2 7.2" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <text x="526" y="432" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff">yourapp</text>
+    <rect x="583" y="418" width="1.8" height="19" fill="#3ddcff"/>
+
+    <!-- section header -->
+    <text x="490" y="470" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.6" fill="#8a8fc0">APP SHORTCUTS</text>
+
+    <!-- row 1: top hit -->
+    <rect x="486" y="480" width="322" height="48" rx="12" fill="#1d2a5e"/>
+    <rect x="498" y="492" width="28" height="28" rx="8" fill="url(#siri)"/>
+    <path d="M512 499 C515.6 503.4 518 505.6 518 508 A6 6 0 0 1 506 508 C506 505.6 508.4 503.4 512 499 Z" fill="#ffffff"/>
+    <text x="538" y="502" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Log water</text>
+    <text x="538" y="518" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" fill="#9aa0d0">YourApp &#183; App Shortcut</text>
+    <path d="M786 500 L791 504.5 L786 509" fill="none" stroke="#6b7099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- row 2 -->
+    <rect x="486" y="534" width="322" height="48" rx="12" fill="#1d2a5e" opacity="0.55"/>
+    <rect x="498" y="546" width="28" height="28" rx="8" fill="#31356b"/>
+    <path d="M513.5 552.5 L506 563 L511 563 L509.5 571.5 L518 560.5 L512.5 560.5 Z" fill="#ffffff"/>
+    <text x="538" y="556" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Start workout</text>
+    <text x="538" y="572" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" fill="#9aa0d0">YourApp &#183; App Shortcut</text>
+    <path d="M786 554 L791 558.5 L786 563" fill="none" stroke="#6b7099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- row 3 -->
+    <rect x="486" y="588" width="322" height="48" rx="12" fill="#1d2a5e" opacity="0.34"/>
+    <rect x="498" y="600" width="28" height="28" rx="8" fill="#31356b"/>
+    <path d="M507 614.5 L510.5 618.2 L517.2 609.8" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="538" y="610" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Clock in</text>
+    <text x="538" y="626" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" fill="#9aa0d0">YourApp &#183; App Shortcut</text>
+    <path d="M786 608 L791 612.5 L786 617" fill="none" stroke="#6b7099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- annotation -->
+  <text x="824" y="686" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#3ddcff">search the app &#8594; tap the action</text>
+  <text x="824" y="706" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#8a8fc0">registers at install &#183; nothing for users to enable</text>
+
+  <!-- === BOTTOM THIRD: Android, the Quick Settings shade === -->
+
+  <rect y="720" width="880" height="360" fill="url(#bg)"/>
+  <rect y="720" width="880" height="80" fill="url(#seamFix)"/>
+  <rect x="56" y="722" width="768" height="1" fill="url(#rule)"/>
+
+  <ellipse cx="650" cy="866" rx="166" ry="108" fill="#7a5cff" opacity="0.11" filter="url(#aaSoft)"/>
+
+  <!-- eyebrow -->
+  <rect x="56" y="752" width="4" height="15" rx="2" fill="url(#siri)"/>
+  <text x="70" y="764" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="2.4" fill="#3ddcff">ANDROID &#183; QUICK SETTINGS</text>
+
+  <!-- headline -->
+  <text x="56" y="806" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">One tap, right</text>
+  <text x="56" y="842" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="url(#headBot)">next to Wi-Fi.</text>
+
+  <!-- body -->
+  <text x="56" y="874" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b9bce0">Up to six actions become real Quick Settings</text>
+  <text x="56" y="896" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b9bce0">tiles. Every action also gets a URL &#8212; write it</text>
+  <text x="56" y="918" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b9bce0">to an NFC sticker, a QR code, or a routine.</text>
+
+  <!-- surface pills -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">
+    <rect x="56" y="940" width="116" height="28" rx="14" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+    <text x="114" y="958.5" text-anchor="middle" fill="#d8d9f0">Quick Settings</text>
+    <rect x="182" y="940" width="48" height="28" rx="14" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+    <text x="206" y="958.5" text-anchor="middle" fill="#d8d9f0">NFC</text>
+    <rect x="240" y="940" width="42" height="28" rx="14" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+    <text x="261" y="958.5" text-anchor="middle" fill="#d8d9f0">QR</text>
+    <rect x="292" y="940" width="80" height="28" rx="14" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+    <text x="332" y="958.5" text-anchor="middle" fill="#d8d9f0">routines</text>
+  </g>
+
+  <!-- code chip -->
+  <rect x="56" y="980" width="372" height="40" rx="10" fill="#0f1023" stroke="#34375f" stroke-width="1.2"/>
+  <text x="74" y="1005" font-family="Consolas, Menlo, monospace" font-size="12"><tspan fill="#7ee0a3">'tiles'</tspan><tspan fill="#8a8fc0"> =&gt; </tspan><tspan fill="#d8d9f0">[</tspan><tspan fill="#ffb4a2">'log-water'</tspan><tspan fill="#d8d9f0">, </tspan><tspan fill="#ffb4a2">'clock-in'</tspan><tspan fill="#d8d9f0">],</tspan></text>
+
+  <!-- notification shade -->
+  <g>
+    <rect x="474" y="744" width="354" height="210" rx="22" fill="#000000" opacity="0.4" filter="url(#aaCast)"/>
+    <rect x="470" y="736" width="354" height="210" rx="22" fill="url(#phone)" stroke="#3a3d6e" stroke-width="1.8"/>
+
+    <text x="488" y="762" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#9aa0d0">9:41</text>
+    <g fill="#4a4f7a">
+      <rect x="768" y="753" width="12" height="7" rx="2"/>
+      <rect x="784" y="753" width="9" height="7" rx="2"/>
+      <rect x="797" y="753" width="15" height="7" rx="3"/>
+    </g>
+
+    <rect x="486" y="770" width="322" height="13" rx="6.5" fill="#2a2c52"/>
+    <rect x="486" y="770" width="196" height="13" rx="6.5" fill="#3a3f70"/>
+
+    <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600">
+
+      <!-- row 1: system, OURS, system -->
+
+      <rect x="486" y="792" width="100" height="64" rx="16" fill="#454b7d"/>
+      <g transform="translate(510, 814)" stroke="#ffffff" fill="none" stroke-linecap="round">
+        <path d="M-10 -4 a14 14 0 0 1 20 0" stroke-width="2"/>
+        <path d="M-6 0.5 a9 9 0 0 1 12 0" stroke-width="2"/>
+        <circle cx="0" cy="6" r="2.2" fill="#ffffff" stroke="none"/>
+      </g>
+      <text x="499" y="844" fill="#ffffff">Wi-Fi</text>
+
+      <!-- ours, mid tap -->
+      <rect x="597" y="792" width="100" height="64" rx="16" fill="url(#siri)" opacity="0.5" filter="url(#aaGlow)"/>
+      <rect x="597" y="792" width="100" height="64" rx="16" fill="url(#siri)"/>
+      <path d="M621 805 C625.6 810.6 629 813.4 629 817 A8 8 0 0 1 613 817 C613 813.4 616.4 810.6 621 805 Z" fill="#ffffff"/>
+      <circle cx="621" cy="814" r="14" fill="none" stroke="#ffffff" stroke-width="1.6" opacity="0.5"/>
+      <circle cx="621" cy="814" r="19.5" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.28"/>
+      <text x="610" y="844" fill="#ffffff">Log water</text>
+
+      <rect x="708" y="792" width="100" height="64" rx="16" fill="#454b7d"/>
+      <path d="M728 809.5 L736 817.5 L732 821 L732 806 L736 809.5 L728 817.5" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
+      <text x="721" y="844" fill="#ffffff">Bluetooth</text>
+
+      <!-- row 2: all system, so the shade reads as a real shade -->
+
+      <rect x="486" y="866" width="100" height="64" rx="16" fill="#252845"/>
+      <g transform="translate(510, 888)" fill="#7e84b0">
+        <path d="M-4.5 -8 H4.5 L2.8 -3.5 H-2.8 Z"/>
+        <path d="M-2.8 -1.6 H2.8 L2.2 8 H-2.2 Z"/>
+      </g>
+      <text x="499" y="918" fill="#7e84b0">Flashlight</text>
+
+      <rect x="597" y="866" width="100" height="64" rx="16" fill="#252845"/>
+      <g transform="translate(621, 888)" fill="#7e84b0">
+        <path d="M0 -9 C1.6 -9 2.4 -7.4 2.4 -5.4 V-2.2 L9 2.2 V4.4 L2.4 2.6 V6.2 L4.6 7.8 V9 L0 8 L-4.6 9 V7.8 L-2.4 6.2 V2.6 L-9 4.4 V2.2 L-2.4 -2.2 V-5.4 C-2.4 -7.4 -1.6 -9 0 -9 Z"/>
+      </g>
+      <text x="610" y="918" fill="#7e84b0">Airplane</text>
+
+      <rect x="708" y="866" width="100" height="64" rx="16" fill="#252845"/>
+      <g transform="translate(732, 888)">
+        <rect x="-9" y="-5.5" width="16" height="11" rx="2.6" fill="none" stroke="#7e84b0" stroke-width="1.7"/>
+        <rect x="8" y="-2.2" width="2.6" height="4.4" rx="1.1" fill="#7e84b0"/>
+        <rect x="-6.8" y="-3.3" width="8" height="6.6" rx="1.2" fill="#7e84b0"/>
+      </g>
+      <text x="721" y="918" fill="#7e84b0">Battery</text>
+    </g>
+  </g>
+
+  <!-- Android 13+ one-tap tile placement prompt, floating over the shade -->
+  <g>
+    <rect x="460" y="940" width="352" height="80" rx="18" fill="#000000" opacity="0.45" filter="url(#aaCast)"/>
+    <rect x="456" y="932" width="352" height="80" rx="18" fill="#1a1c3a" stroke="#4a4f7a" stroke-width="1.4"/>
+
+    <rect x="474" y="950" width="32" height="32" rx="9" fill="url(#siri)"/>
+    <g transform="translate(490, 966)" stroke="#ffffff" fill="none" stroke-linecap="round">
+      <circle r="7.6" stroke-width="1.9"/>
+      <path d="M0 -4.2 V0 L3.2 2.4" stroke-width="1.9"/>
+    </g>
+
+    <text x="518" y="958" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff">Add &#8220;Clock in&#8221; to Quick Settings?</text>
+    <text x="518" y="975" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" fill="#9aa0d0">Android 13+ one-tap placement</text>
+
+    <rect x="518" y="982" width="66" height="22" rx="11" fill="url(#siri)"/>
+    <text x="551" y="997" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#ffffff">Add tile</text>
+    <text x="598" y="997" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" fill="#9aa0d0">Not now</text>
+  </g>
+
+  <!-- annotation -->
+  <text x="824" y="1046" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#3ddcff">tap the tile &#8594; queued instantly</text>
+  <text x="824" y="1066" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#8a8fc0">no app launch &#183; six frozen slots survive updates</text>
+
 </svg>
