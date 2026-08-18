@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1023"/>
+      <stop offset="1" stop-color="#1c1440"/>
+    </linearGradient>
+    <linearGradient id="siri" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ddcff"/>
+      <stop offset="0.5" stop-color="#7a5cff"/>
+      <stop offset="1" stop-color="#ff5ca8"/>
+    </linearGradient>
+    <linearGradient id="subg" x1="60" y1="0" x2="640" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3ddcff"/>
+      <stop offset="0.55" stop-color="#7a5cff"/>
+      <stop offset="1" stop-color="#ff5ca8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- NEW badge -->
+  <rect x="60" y="52" rx="17" ry="17" width="368" height="38" fill="none" stroke="url(#siri)" stroke-width="2"/>
+  <text x="82" y="78" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">NEW &#183; NativePHP Plugin Marketplace</text>
+
+  <!-- Title -->
+  <text x="60" y="176" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="68" font-weight="700" fill="#ffffff">Actions Anywhere!</text>
+  <text x="60" y="222" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="url(#subg)">Siri &#183; Spotlight &#183; Quick Settings &#183; NFC &amp; QR</text>
+  <text x="60" y="262" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#b9bce0">One Laravel config. No Swift, no Kotlin, no Xcode.</text>
+
+  <!-- Phrase bubble -->
+  <rect x="60" y="304" rx="23" ry="23" width="500" height="54" fill="#ffffff" opacity="0.09"/>
+  <text x="88" y="339" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#ffffff">&#8220;Hey Siri, log water in <tspan font-weight="700">YourApp</tspan>&#8221;</text>
+
+  <!-- Waveform -->
+  <g transform="translate(60, 388)">
+    <path d="M0 30 Q 27 -8, 54 30 T 108 30 T 162 30 T 216 30 T 270 30 T 324 30 T 378 30 T 432 30"
+          fill="none" stroke="url(#siri)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 30 Q 27 68, 54 30 T 108 30 T 162 30 T 216 30 T 270 30 T 324 30 T 378 30 T 432 30"
+          fill="none" stroke="url(#siri)" stroke-width="3.5" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <!-- Reply -->
+  <rect x="60" y="472" rx="18" ry="18" width="214" height="46" fill="url(#siri)" opacity="0.22"/>
+  <text x="88" y="503" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#ffffff">&#8220;Logged.&#8221;</text>
+
+  <!-- Bottom line -->
+  <text x="60" y="576" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" fill="#8a8fc0">Your Laravel handler runs. iOS + Android. Built for NativePHP Mobile v4.</text>
+
+  <!-- Six surface icons, 2x3 grid -->
+  <g>
+    <!-- Siri mic -->
+    <g transform="translate(880, 170) scale(1.85)">
+      <circle r="20" fill="url(#siri)"/>
+      <rect x="-3.5" y="-9" width="7" height="11" rx="3.5" fill="#ffffff"/>
+      <path d="M-6.5 0.5 a6.5 6.5 0 0 0 13 0" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+      <path d="M0 7 L0 10.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="880" y="238" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">Siri</text>
+
+    <!-- Spotlight -->
+    <g transform="translate(1064, 170) scale(1.85)">
+      <circle r="20" fill="url(#siri)"/>
+      <circle cx="-1.5" cy="-1.5" r="5.5" fill="none" stroke="#ffffff" stroke-width="2.2"/>
+      <path d="M2.6 2.6 L7.6 7.6" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+    </g>
+    <text x="1064" y="238" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">Spotlight</text>
+
+    <!-- Shortcuts bolt -->
+    <g transform="translate(880, 340) scale(1.85)">
+      <circle r="20" fill="url(#siri)"/>
+      <path d="M1.5 -9.5 L-6 1 L-1 1 L-2.5 9.5 L6 -1.5 L0.5 -1.5 Z" fill="#ffffff"/>
+    </g>
+    <text x="880" y="408" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">Shortcuts app</text>
+
+    <!-- Quick Settings sliders -->
+    <g transform="translate(1064, 340) scale(1.85)">
+      <circle r="20" fill="url(#siri)"/>
+      <rect x="-8.5" y="-6" width="17" height="3" rx="1.5" fill="#ffffff" opacity="0.6"/>
+      <circle cx="3.5" cy="-4.5" r="3.2" fill="#ffffff"/>
+      <rect x="-8.5" y="3" width="17" height="3" rx="1.5" fill="#ffffff" opacity="0.6"/>
+      <circle cx="-3.5" cy="4.5" r="3.2" fill="#ffffff"/>
+    </g>
+    <text x="1064" y="408" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">Quick Settings</text>
+
+    <!-- NFC -->
+    <g transform="translate(880, 510) scale(1.85)">
+      <circle r="20" fill="url(#siri)"/>
+      <circle cx="-7" cy="0" r="2.4" fill="#ffffff"/>
+      <path d="M-3 -4.5 a5 5 0 0 1 0 9" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+      <path d="M0.5 -8 a9 9 0 0 1 0 16" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+      <path d="M4 -11 a12.5 12.5 0 0 1 0 22" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+    </g>
+    <text x="880" y="578" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">NFC tags</text>
+
+    <!-- QR -->
+    <g transform="translate(1064, 510) scale(1.85)">
+      <circle r="20" fill="url(#siri)"/>
+      <g fill="#ffffff">
+        <rect x="-9" y="-9" width="7" height="7" rx="1.4"/>
+        <rect x="2" y="-9" width="7" height="7" rx="1.4"/>
+        <rect x="-9" y="2" width="7" height="7" rx="1.4"/>
+        <rect x="2.5" y="2.5" width="3" height="3"/>
+        <rect x="6.5" y="6" width="2.5" height="3"/>
+        <rect x="2.5" y="7.5" width="2.5" height="2"/>
+      </g>
+    </g>
+    <text x="1064" y="578" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#b9bce0">QR codes</text>
+  </g>
+</svg>
