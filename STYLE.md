@@ -169,7 +169,7 @@ to render.
 | Plugin | hero | flow |
 |---|---|---|
 | widgets | ✅ dark (flat phone) | ⚠️ legacy light-iso |
-| wifi-scan | ✅ dark (iso floor) | (check) |
+| wifi-scan | ✅ dark (iso floor) | ✅ dark (verified 2026-08-13) |
 | share-target | ⚠️ legacy light-iso | ✅ dark |
 | geofence | ✅ dark (SVG master) | ✅ dark (SVG master) |
 | actions-anywhere | ✅ dark, 880×1080 stacked (SVG master) | ✅ dark (SVG master) |
