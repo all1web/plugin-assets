@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B2438"/>
+      <stop offset="1" stop-color="#141C2C"/>
+    </linearGradient>
+    <linearGradient id="house" gradientUnits="userSpaceOnUse" x1="56" y1="0" x2="330" y2="0">
+      <stop offset="0" stop-color="#4EA3F7"/>
+      <stop offset="1" stop-color="#8B7CF8"/>
+    </linearGradient>
+    <linearGradient id="slab" gradientUnits="userSpaceOnUse" x1="500" y1="120" x2="810" y2="300">
+      <stop offset="0" stop-color="#232F4C"/>
+      <stop offset="1" stop-color="#1B2438"/>
+    </linearGradient>
+    <linearGradient id="card" gradientUnits="userSpaceOnUse" x1="520" y1="120" x2="720" y2="250">
+      <stop offset="0" stop-color="#F6F8FC"/>
+      <stop offset="1" stop-color="#D6DEEC"/>
+    </linearGradient>
+    <linearGradient id="amber" gradientUnits="userSpaceOnUse" x1="540" y1="200" x2="740" y2="270">
+      <stop offset="0" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+    <filter id="softglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <rect width="880" height="360" rx="18" fill="url(#bg)"/>
+
+  <!-- === left column === -->
+  <text x="56" y="74" fill="#F59E0B" font-size="11.5" font-weight="700" letter-spacing="2.6">NATIVEPHP MOBILE PLUGIN</text>
+
+  <text x="56" y="126" fill="#F4F7FC" font-size="34" font-weight="700">Your app, on their</text>
+  <text x="56" y="166" fill="url(#house)" font-size="34" font-weight="700">home screen.</text>
+
+  <text x="56" y="202" fill="#8E9BB5" font-size="14.5">A real Android widget, and on iOS the app</text>
+  <text x="56" y="223" fill="#8E9BB5" font-size="14.5">icon itself: quick actions and a live badge.</text>
+  <text x="56" y="244" fill="#7E8BA8" font-size="14.5">One push from Laravel. Zero native code.</text>
+
+  <rect x="56" y="268" width="368" height="44" rx="10" fill="#10182A" stroke="#263452" stroke-width="1.2"/>
+  <text x="76" y="296" font-family="Consolas, Menlo, monospace" font-size="14.5">
+    <tspan fill="#4EC9B0">Widgets</tspan><tspan fill="#8E9BB5">::</tspan><tspan fill="#4EA3F7">update</tspan><tspan fill="#C8D3E8">(</tspan><tspan fill="#E8A87C">'sales'</tspan><tspan fill="#C8D3E8">, [...]);</tspan>
+  </text>
+
+  <!-- === iso diorama === -->
+  <g transform="translate(0,10)">
+
+    <!-- slab side, drawn as the same plane pushed down in screen space -->
+    <g transform="translate(0,13)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,648,112)">
+        <rect x="0" y="0" width="182" height="182" fill="#101726"/>
+      </g>
+    </g>
+
+    <g transform="matrix(0.866,0.5,-0.866,0.5,648,112)">
+      <rect x="0" y="0" width="182" height="182" fill="url(#slab)"/>
+      <g stroke="#2A3A5C" stroke-width="0.9" opacity="0.55">
+        <path d="M0 45.5 H182 M0 91 H182 M0 136.5 H182"/>
+        <path d="M45.5 0 V182 M91 0 V182 M136.5 0 V182"/>
+      </g>
+      <rect x="0" y="0" width="182" height="182" fill="none" stroke="#33456B" stroke-width="1.4"/>
+    </g>
+
+    <!-- info widget card, floated above the slab -->
+    <g transform="translate(0,-34)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,648,112)" opacity="0.35">
+        <rect x="14" y="14" width="86" height="62" rx="7" fill="#0B1120"/>
+      </g>
+    </g>
+    <g transform="translate(0,-46)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,648,112)">
+        <rect x="14" y="14" width="86" height="62" rx="7" fill="url(#card)"/>
+        <rect x="22" y="22" width="34" height="7" rx="3.5" fill="#0F172A"/>
+        <rect x="76" y="21" width="18" height="9" rx="4.5" fill="url(#amber)"/>
+        <rect x="22" y="38" width="54" height="5" rx="2.5" fill="#64748B"/>
+        <rect x="22" y="49" width="44" height="5" rx="2.5" fill="#64748B"/>
+        <rect x="22" y="60" width="30" height="4" rx="2" fill="#94A3B8"/>
+      </g>
+    </g>
+
+    <!-- quick actions pill, the amber subject -->
+    <g transform="translate(0,-20)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,648,112)" opacity="0.4">
+        <rect x="14" y="90" width="86" height="26" rx="13" fill="#0B1120"/>
+      </g>
+    </g>
+    <g transform="translate(0,-30)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,648,112)">
+        <rect x="14" y="90" width="86" height="26" rx="13" fill="none" stroke="#F59E0B" stroke-width="5" opacity="0.5" filter="url(#glow)"/>
+        <rect x="14" y="90" width="86" height="26" rx="13" fill="#1B2438" stroke="url(#amber)" stroke-width="1.8"/>
+        <g fill="#FBBF24">
+          <rect x="24" y="99" width="12" height="8" rx="2"/>
+          <rect x="51" y="99" width="12" height="8" rx="2"/>
+          <rect x="78" y="99" width="12" height="8" rx="2"/>
+        </g>
+        <g stroke="#33456B" stroke-width="0.9">
+          <path d="M43.5 96 V110 M70.5 96 V110"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- app icon tile with its badge, the iOS half of the story -->
+    <g transform="translate(0,-30)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,648,112)" opacity="0.4">
+        <rect x="122" y="30" width="42" height="42" rx="11" fill="#0B1120"/>
+      </g>
+    </g>
+    <g transform="translate(0,-42)">
+      <g transform="matrix(0.866,0.5,-0.866,0.5,648,112)">
+        <rect x="122" y="30" width="42" height="42" rx="11" fill="#243350" stroke="#4A5F8E" stroke-width="1.6"/>
+        <rect x="122" y="30" width="42" height="42" rx="11" fill="none" stroke="#F59E0B" stroke-width="1" opacity="0.45"/>
+        <rect x="131" y="41" width="24" height="5" rx="2.5" fill="#C8D3E8"/>
+        <rect x="131" y="51" width="17" height="5" rx="2.5" fill="#8E9BB5"/>
+        <rect x="131" y="61" width="12" height="5" rx="2.5" fill="#64738F"/>
+      </g>
+      <circle cx="764" cy="209" r="13" fill="#F59E0B" opacity="0.5" filter="url(#softglow)"/>
+      <circle cx="764" cy="209" r="11" fill="url(#amber)"/>
+      <text x="764" y="213.5" fill="#1B2438" font-size="12.5" font-weight="700" text-anchor="middle">5</text>
+    </g>
+  </g>
+
+  <!-- === annotation === -->
+  <text x="824" y="316" fill="#38BDF8" font-size="13.5" font-weight="700" text-anchor="end">One push, three surfaces</text>
+  <text x="824" y="334" fill="#64738F" font-size="11.5" text-anchor="end">widget card, action bar, app icon</text>
+</svg>

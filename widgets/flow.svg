@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="150" viewBox="0 0 880 150" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A2337"/>
+      <stop offset="1" stop-color="#131B2B"/>
+    </linearGradient>
+    <linearGradient id="house" gradientUnits="userSpaceOnUse" x1="658" y1="26" x2="854" y2="124">
+      <stop offset="0" stop-color="#4EA3F7"/>
+      <stop offset="1" stop-color="#8B7CF8"/>
+    </linearGradient>
+    <linearGradient id="amber" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="24">
+      <stop offset="0" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="880" height="150" rx="16" fill="url(#bg)"/>
+
+  <!-- === card 1 : the push === -->
+  <rect x="28" y="26" width="196" height="98" rx="12" fill="#1D2740" stroke="#2E3D60" stroke-width="1.2"/>
+  <g transform="translate(46,44)" fill="none" stroke="#4EA3F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="1" y="1" width="20" height="20" rx="5"/>
+    <path d="M11 16 V7 M7.5 10.5 L11 7 14.5 10.5"/>
+  </g>
+  <text x="46" y="94" fill="#F4F7FC" font-size="13.5" font-weight="700">Push from PHP</text>
+  <text x="46" y="112" fill="#8E9BB5" font-size="11">Widgets::update(...)</text>
+
+  <!-- === card 2 : the native store === -->
+  <rect x="238" y="26" width="196" height="98" rx="12" fill="#1D2740" stroke="#2E3D60" stroke-width="1.2"/>
+  <g transform="translate(256,44)" fill="none" stroke="#8B7CF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="1" y="3" width="20" height="6" rx="3"/>
+    <rect x="1" y="13" width="20" height="6" rx="3"/>
+  </g>
+  <text x="256" y="94" fill="#F4F7FC" font-size="13.5" font-weight="700">Stored natively</text>
+  <text x="256" y="112" fill="#8E9BB5" font-size="11">offline, reboot-proof</text>
+
+  <!-- === card 3 : the surfaces === -->
+  <rect x="448" y="26" width="196" height="98" rx="12" fill="#1D2740" stroke="#2E3D60" stroke-width="1.2"/>
+  <g transform="translate(466,44)">
+    <rect x="1" y="1" width="20" height="12" rx="3" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="1" y="16" width="20" height="6" rx="3" fill="url(#amber)"/>
+  </g>
+  <text x="466" y="94" fill="#F4F7FC" font-size="13.5" font-weight="700">Every surface repaints</text>
+  <text x="466" y="112" fill="#8E9BB5" font-size="11">widget, action bar, app icon</text>
+
+  <!-- === card 4 : the payoff === -->
+  <rect x="658" y="26" width="196" height="98" rx="12" fill="#1D2740" stroke="url(#house)" stroke-width="1.8"/>
+  <g transform="translate(676,44)" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 2 L4 14 L7.5 11 L10 17 L13 15.5 L10.5 10 L15 9.5 Z"/>
+    <path d="M17 3.5 A7 7 0 0 1 18.5 8" opacity="0.7"/>
+  </g>
+  <text x="676" y="94" fill="#F4F7FC" font-size="13.5" font-weight="700">A tap lands in your app</text>
+  <text x="676" y="112" fill="#8E9BB5" font-size="11">deep-linked to the right screen</text>
+</svg>
