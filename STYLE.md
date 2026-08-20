@@ -69,7 +69,8 @@ bracketed parts.
 | Green | `#34C77B` | success checks |
 
 **One accent per plugin** for the scene's glowing subject (geofence teal
-`#2DD4BF`, wifi-scan cyan-blue, widgets amber/orange). The headline gradient
+`#2DD4BF`, wifi-scan cyan-blue, widgets amber/orange, outbox-drain green
+`#34C77B`). The headline gradient
 stays the house blue→violet on every plugin — that's the brand constant.
 
 **Code chip syntax:** class `#4EC9B0` · `::` `#8E9BB5` · method `#4EA3F7` ·
@@ -173,6 +174,7 @@ to render.
 | share-target | ⚠️ legacy light-iso | ✅ dark |
 | geofence | ✅ dark (SVG master) | ✅ dark (SVG master) |
 | actions-anywhere | ✅ dark, 880×1080 stacked (SVG master) | ✅ dark (SVG master) |
+| outbox-drain | ✅ dark (iso pipe run + upright phone, SVG master) | ✅ dark (SVG master) |
 
 Legacy light-iso pieces get redrawn with the prompt above — but **don't churn
 art for a listing that's mid-review** (share-target); redraw after approval.

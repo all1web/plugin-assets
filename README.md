@@ -1,16 +1,17 @@
 # plugin-assets
 
-Public listing artwork for [ALL 1](https://all1.ai) NativePHP plugins.
-READMEs and marketplace listings hot-link these files, so **this repo stays
-public** — moving or renaming a file breaks live listings.
+Public listing artwork for [ALL 1](https://all1.ai) plugins — NativePHP, and
+OpenClaw. READMEs and marketplace listings hot-link these files, so **this repo
+stays public** — moving or renaming a file breaks live listings.
 
-| Plugin | Hero | Flow |
-|---|---|---|
-| `share-target` | [hero.png](share-target/hero.png) | [flow.png](share-target/flow.png) |
-| `widgets` | [hero.png](widgets/hero.png) | [flow.png](widgets/flow.png) |
-| `wifi-scan` | [hero.png](wifi-scan/hero.png) | [flow.png](wifi-scan/flow.png) |
-| `geofence` | [hero.png](geofence/hero.png) | [flow.png](geofence/flow.png) |
-| `actions-anywhere` | [hero.png](actions-anywhere/hero.png) | [flow.png](actions-anywhere/flow.png) |
+| Plugin | Host | Hero | Flow |
+|---|---|---|---|
+| `share-target` | NativePHP | [hero.png](share-target/hero.png) | [flow.png](share-target/flow.png) |
+| `widgets` | NativePHP | [hero.png](widgets/hero.png) | [flow.png](widgets/flow.png) |
+| `wifi-scan` | NativePHP | [hero.png](wifi-scan/hero.png) | [flow.png](wifi-scan/flow.png) |
+| `geofence` | NativePHP | [hero.png](geofence/hero.png) | [flow.png](geofence/flow.png) |
+| `actions-anywhere` | NativePHP | [hero.png](actions-anywhere/hero.png) | [flow.png](actions-anywhere/flow.png) |
+| `outbox-drain` | OpenClaw | [hero.png](outbox-drain/hero.png) | [flow.png](outbox-drain/flow.png) |
 
 Canonical link form (302s to the raw host):
 
