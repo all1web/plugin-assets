@@ -1,33 +1,153 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 150" font-family="Segoe UI, system-ui, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="150" viewBox="0 0 880 150" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+
   <defs>
-    <linearGradient id="a2" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#818cf8"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#F3F7FF"/>
+      <stop offset="1" stop-color="#E1E9F8"/>
     </linearGradient>
+    <linearGradient id="tileTop" x1="0" y1="0" x2="0.65" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#F2F6FD"/>
+      <stop offset="1" stop-color="#E1EAF8"/>
+    </linearGradient>
+    <linearGradient id="tileEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C6D3EA"/>
+      <stop offset="1" stop-color="#A3B6D6"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9F0FF"/>
+    </linearGradient>
+    <linearGradient id="phoneBody" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#39456A"/>
+      <stop offset="1" stop-color="#232C48"/>
+    </linearGradient>
+    <linearGradient id="cardTop" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EDF2FC"/>
+    </linearGradient>
+    <linearGradient id="cobalt" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#5183F8"/>
+      <stop offset="1" stop-color="#3163E4"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5C6E90" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#5C6E90" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4.5"/>
+      <feOffset dy="7"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.24"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="880" height="150" rx="14" fill="#0f172a"/>
 
-  <g text-anchor="middle">
-    <rect x="30" y="42" width="180" height="66" rx="12" fill="#16233b" stroke="#334155" stroke-width="1.5"/>
-    <text x="120" y="70" fill="#e2e8f0" font-size="14" font-weight="600">📤 User shares</text>
-    <text x="120" y="92" fill="#94a3b8" font-size="12">from any app</text>
+  <rect width="880" height="150" rx="14" fill="url(#bg)"/>
 
-    <rect x="250" y="42" width="180" height="66" rx="12" fill="#16233b" stroke="#334155" stroke-width="1.5"/>
-    <text x="340" y="70" fill="#e2e8f0" font-size="14" font-weight="600">📥 Native inbox</text>
-    <text x="340" y="92" fill="#94a3b8" font-size="12">survives cold launch</text>
+  <!-- === step 1: someone taps Share in any app === -->
+  <ellipse cx="150" cy="86" rx="66" ry="20" fill="url(#ambient)"/>
+  <g filter="url(#tight)">
+    <g transform="translate(0,13)"><g transform="matrix(0.866,0.5,-0.866,0.5,150,16)"><rect width="68" height="68" rx="12" fill="url(#tileEdge)"/></g></g>
+    <g transform="translate(0,6)"><g transform="matrix(0.866,0.5,-0.866,0.5,150,16)"><rect width="68" height="68" rx="12" fill="#C7D4EA"/></g></g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,150,16)">
+      <rect width="68" height="68" rx="12" fill="url(#tileTop)"/>
+      <rect x="1" y="1" width="66" height="66" rx="11" fill="none" stroke="#FFFFFF" stroke-width="1.4" opacity="0.85"/>
+      <g stroke="#CFDAEE" stroke-width="1" opacity="0.6"><path d="M0 34 H68 M34 0 V68"/></g>
+    </g>
+  </g>
+  <g transform="translate(150,40)" filter="url(#tight)">
+    <g transform="translate(0,6)"><rect x="-27" y="-22" width="54" height="44" rx="9" fill="#B9C8E4"/></g>
+    <rect x="-27" y="-22" width="54" height="44" rx="9" fill="url(#cardTop)"/>
+    <rect x="-25.6" y="-20.6" width="51.2" height="41.2" rx="7.8" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9"/>
+    <rect x="-19" y="-14" width="32" height="3.6" rx="1.8" fill="#C3D0E6"/>
+    <rect x="-19" y="-7" width="23" height="3.2" rx="1.6" fill="#DCE4F3"/>
+    <g transform="translate(-19,2)">
+      <circle cx="3.8" cy="7.6" r="3.6" fill="#7C5CFC"/>
+      <circle cx="14.6" cy="2.6" r="3.6" fill="#7C5CFC"/>
+      <circle cx="14.6" cy="12.6" r="3.6" fill="#7C5CFC"/>
+      <path d="M7.2 6 L11.2 3.6 M7.2 9.2 L11.2 11.6" stroke="#7C5CFC" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+  <text x="150" y="128" font-size="12.5" font-weight="700" fill="#1B2440" text-anchor="middle">Tap Share, anywhere</text>
+  <text x="150" y="143" font-size="10.5" fill="#6B7794" text-anchor="middle">links, text, photos, files</text>
 
-    <rect x="470" y="42" width="180" height="66" rx="12" fill="#16233b" stroke="#334155" stroke-width="1.5"/>
-    <text x="560" y="70" fill="#e2e8f0" font-size="14" font-weight="600">🐘 Plain PHP</text>
-    <text x="560" y="92" fill="#94a3b8" font-size="12">ShareTarget::pending()</text>
+  <!-- === step 2: your app is in the sheet, the inbox holds it === -->
+  <ellipse cx="440" cy="86" rx="66" ry="20" fill="url(#ambient)"/>
+  <g filter="url(#tight)">
+    <g transform="translate(0,13)"><g transform="matrix(0.866,0.5,-0.866,0.5,440,16)"><rect width="68" height="68" rx="12" fill="url(#tileEdge)"/></g></g>
+    <g transform="translate(0,6)"><g transform="matrix(0.866,0.5,-0.866,0.5,440,16)"><rect width="68" height="68" rx="12" fill="#C7D4EA"/></g></g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,440,16)">
+      <rect width="68" height="68" rx="12" fill="url(#tileTop)"/>
+      <rect x="1" y="1" width="66" height="66" rx="11" fill="none" stroke="#FFFFFF" stroke-width="1.4" opacity="0.85"/>
+      <rect x="16" y="16" width="36" height="36" rx="9" fill="#7C5CFC" fill-opacity="0.13" stroke="#7C5CFC" stroke-width="1.6" stroke-dasharray="6 4.5"/>
+    </g>
+  </g>
+  <g transform="translate(438,38)" filter="url(#tight)">
+    <g transform="translate(0,6)"><rect x="-17" y="-27" width="34" height="54" rx="8" fill="#1A2238"/></g>
+    <rect x="-17" y="-27" width="34" height="54" rx="8" fill="url(#phoneBody)"/>
+    <rect x="-15.6" y="-25.6" width="31.2" height="51.2" rx="6.8" fill="none" stroke="#6E7DA6" stroke-width="1" opacity="0.5"/>
+    <rect x="-13" y="-22" width="26" height="44" rx="4.5" fill="url(#screen)"/>
+    <rect x="-4" y="-19" width="8" height="2.2" rx="1.1" fill="#C3D0E6"/>
+    <g>
+      <rect x="-10" y="-13" width="20" height="9.6" rx="2.8" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.7"/>
+      <rect x="-10" y="-13" width="2.1" height="9.6" rx="1.05" fill="#7C5CFC"/>
+      <rect x="-5.4" y="-10.7" width="5.2" height="5.2" rx="1.6" fill="#7C5CFC"/>
+      <rect x="1.4" y="-10.2" width="7.4" height="2.1" rx="1.05" fill="#41506F" opacity="0.75"/>
+      <rect x="-10" y="-1.6" width="20" height="9.6" rx="2.8" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.7"/>
+      <rect x="-5.4" y="0.7" width="5.2" height="5.2" rx="1.6" fill="#C3D0E6"/>
+      <rect x="1.4" y="1.2" width="6.4" height="2.1" rx="1.05" fill="#93A2BF" opacity="0.6"/>
+      <rect x="-10" y="9.8" width="20" height="9.6" rx="2.8" fill="#FFFFFF" stroke="#E2E9F7" stroke-width="0.7"/>
+      <rect x="-5.4" y="12.1" width="5.2" height="5.2" rx="1.6" fill="#C3D0E6"/>
+      <rect x="1.4" y="12.6" width="6.4" height="2.1" rx="1.05" fill="#93A2BF" opacity="0.6"/>
+    </g>
+  </g>
+  <g transform="translate(474,16)" filter="url(#tight)">
+    <g transform="translate(0,5)"><rect width="68" height="25" rx="8" fill="#B9C8E4"/></g>
+    <rect width="68" height="25" rx="8" fill="url(#cardTop)"/>
+    <rect x="1.3" y="1.3" width="65.4" height="22.4" rx="6.8" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9"/>
+    <text x="10" y="16.2" font-size="9.5" font-weight="700" fill="#41506F">Inbox</text>
+    <g transform="translate(45,7.2)">
+      <rect width="16" height="10.6" rx="5.3" fill="#7C5CFC"/>
+      <text x="5" y="7.8" font-size="6.8" font-weight="700" fill="#FFFFFF">3</text>
+    </g>
+  </g>
+  <text x="440" y="128" font-size="12.5" font-weight="700" fill="#1B2440" text-anchor="middle">Your app is in the sheet</text>
+  <text x="440" y="143" font-size="10.5" fill="#6B7794" text-anchor="middle">held natively, even if closed</text>
 
-    <rect x="690" y="42" width="160" height="66" rx="12" fill="#16233b" stroke="url(#a2)" stroke-width="2"/>
-    <text x="770" y="70" fill="#e2e8f0" font-size="14" font-weight="600">✅ Saved</text>
-    <text x="770" y="92" fill="#94a3b8" font-size="12">your app, your rules</text>
+  <!-- === step 3: plain PHP receives it === -->
+  <ellipse cx="730" cy="86" rx="66" ry="20" fill="url(#ambient)"/>
+  <g filter="url(#tight)">
+    <g transform="translate(0,13)"><g transform="matrix(0.866,0.5,-0.866,0.5,730,16)"><rect width="68" height="68" rx="12" fill="url(#tileEdge)"/></g></g>
+    <g transform="translate(0,6)"><g transform="matrix(0.866,0.5,-0.866,0.5,730,16)"><rect width="68" height="68" rx="12" fill="#C7D4EA"/></g></g>
+    <g transform="matrix(0.866,0.5,-0.866,0.5,730,16)">
+      <rect width="68" height="68" rx="12" fill="url(#tileTop)"/>
+      <rect x="1" y="1" width="66" height="66" rx="11" fill="none" stroke="#FFFFFF" stroke-width="1.4" opacity="0.85"/>
+      <g stroke="#CFDAEE" stroke-width="1" opacity="0.6"><path d="M0 34 H68 M34 0 V68"/></g>
+    </g>
+  </g>
+  <g transform="translate(730,38)" filter="url(#tight)">
+    <g transform="translate(0,7)"><rect x="-33" y="-21" width="66" height="46" rx="10" fill="#2748AE"/></g>
+    <rect x="-33" y="-21" width="66" height="46" rx="10" fill="url(#cobalt)"/>
+    <rect x="-31.6" y="-19.6" width="63.2" height="43.2" rx="8.6" fill="none" stroke="#FFFFFF" stroke-width="1.1" opacity="0.26"/>
+    <text x="-25" y="-6" font-size="10" font-weight="700" fill="#FFFFFF">PHP</text>
+    <rect x="-25" y="0" width="48" height="3.2" rx="1.6" fill="#FFFFFF" opacity="0.5"/>
+    <rect x="-25" y="6.4" width="31" height="3.2" rx="1.6" fill="#FFFFFF" opacity="0.34"/>
+    <g transform="translate(1,-15)">
+      <rect width="29" height="11.5" rx="5.75" fill="#FFFFFF" opacity="0.95"/>
+      <text x="4.8" y="8.4" font-size="7" font-weight="700" fill="#2C55C9">$item</text>
+    </g>
+  </g>
+  <text x="730" y="128" font-size="12.5" font-weight="700" fill="#1B2440" text-anchor="middle">Plain PHP receives it</text>
+  <text x="730" y="143" font-size="10.5" fill="#6B7794" text-anchor="middle">url, text, image or file</text>
+
+  <!-- === arrows === -->
+  <g stroke="#9DB0CE" stroke-width="2.1" fill="none" stroke-linecap="round">
+    <path d="M226 58 H350"/>
+    <path d="M558 58 H640"/>
+  </g>
+  <g fill="#9DB0CE">
+    <path d="M352 58 L343 53 L343 63 Z"/>
+    <path d="M642 58 L633 53 L633 63 Z"/>
   </g>
 
-  <g stroke="url(#a2)" stroke-width="4" stroke-linecap="round">
-    <line x1="214" y1="75" x2="244" y2="75"/>
-    <line x1="434" y1="75" x2="464" y2="75"/>
-    <line x1="654" y1="75" x2="684" y2="75"/>
-  </g>
 </svg>
